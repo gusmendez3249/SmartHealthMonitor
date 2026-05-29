@@ -16,13 +16,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel // Importación para inyección automática
+import edu.mx.cmjg.smarthealthmonitor.BuildConfig
 import edu.mx.cmjg.smarthealthmonitor.data.models.LecturaFC
 import edu.mx.cmjg.smarthealthmonitor.data.models.MockData
 import edu.mx.cmjg.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 import edu.mx.cmjg.smarthealthmonitor.ui.viewmodel.DashboardViewModel
-
-// Asegúrate de que si tu DashboardViewModel está en otro paquete (ej. viewmodel), lo importes aquí:
-// import edu.mx.cmjg.smarthealthmonitor.ui.viewmodel.DashboardViewModel
+// Asegúrate de importar el repositorio si se encuentra en otra ruta:
+// import edu.mx.cmjg.smarthealthmonitor.data.repository.SmartHealthRepository
 
 @OptIn(ExperimentalMaterial3Api::class) // Necesario para TopAppBar
 @Composable
@@ -109,6 +109,21 @@ fun DashboardScreen(
                 items(historial, key = { it.id }) { lectura ->
                     FilaHistorial(lectura = lectura)
                 }
+
+                // ── Botón de simulación — SOLO PARA DEBUG ──
+                item {
+                    if (BuildConfig.DEBUG) {
+                        OutlinedButton(
+                            onClick = {
+                                // 🚀 Ahora sí ejecuta la función del ViewModel
+                                viewModel.simularDatosWearable()
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text("Simular dato del wearable (DEBUG)")
+                        }
+                    }
+                }
             }
         }
     }
@@ -121,7 +136,6 @@ fun DashboardScreen(
 @Composable
 private fun DashboardScreenPreview() {
     SmartHealthMonitorTheme {
-        // Nota: Si tu vista previa rompe debido al ViewModel, puedes pasarle una instancia mock/básica
         DashboardScreen()
     }
 }

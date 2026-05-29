@@ -8,8 +8,6 @@ import edu.mx.cmjg.smarthealthmonitor.data.models.MockData
 
 class DashboardViewModel : ViewModel() {
 
-    // FC: viene del wearable real vía Repository.
-    // Si es 0 (sin dato aún), usar valor simulado.
     val fc: StateFlow<Int> = SmartHealthRepository.fcFlow
         .map { if (it == 0) MockData.fcActual else it }
         .stateIn(
@@ -25,6 +23,16 @@ class DashboardViewModel : ViewModel() {
             started      = SharingStarted.WhileSubscribed(5_000),
             initialValue = MockData.pasosActual
         )
-    val historial = MockData.historialFC  // TODO S7: Room
-}
 
+    val historial = MockData.historialFC  // TODO S7: Room
+
+    // 🌟 AGREGA ESTA FUNCIÓN PARA LA SIMULACIÓN
+    fun simularDatosWearable() {
+        val fcAleatoria = (60..110).random()
+        val pasosAleatorios = (3000..8000).random()
+
+        // Si tu SmartHealthRepository tiene funciones para cambiar el valor, descoméntalas aquí:
+        SmartHealthRepository.actualizarFC(fcAleatoria)
+        SmartHealthRepository.actualizarPasos(pasosAleatorios)
+    }
+}
