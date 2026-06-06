@@ -3,6 +3,7 @@ package edu.mx.cmjg.smarthealthmonitor.data
 import android.util.Log
 import com.google.android.gms.wearable.MessageEvent
 import com.google.android.gms.wearable.WearableListenerService
+import kotlinx.coroutines.launch
 
 class WearListenerService : WearableListenerService() {
 
@@ -20,7 +21,9 @@ class WearListenerService : WearableListenerService() {
         when (path) {
             PATH_FC -> {
                 val bpm = data.toIntOrNull() ?: return
-                SmartHealthRepository.actualizarFC(bpm)
+                kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.Dispatchers.IO).launch {
+                    SmartHealthRepository.actualizarFC(bpm)
+                }
             }
             PATH_PASOS -> {
                 val pasos = data.toIntOrNull() ?: return

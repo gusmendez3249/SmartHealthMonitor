@@ -2,6 +2,7 @@ package edu.mx.cmjg.smarthealthmonitor.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
 import androidx.lifecycle.viewModelScope
 import edu.mx.cmjg.smarthealthmonitor.data.SmartHealthRepository
 import edu.mx.cmjg.smarthealthmonitor.data.models.MockData
@@ -24,7 +25,11 @@ class DashboardViewModel : ViewModel() {
             initialValue = MockData.pasosActual
         )
 
-    val historial = MockData.historialFC  // TODO S7: Room
+    val historial = SmartHealthRepository.obtenerHistorial().stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.WhileSubscribed(5_000),
+        initialValue = emptyList()
+    )
 
     // 🌟 AGREGA ESTA FUNCIÓN PARA LA SIMULACIÓN
     fun simularDatosWearable() {
@@ -32,7 +37,9 @@ class DashboardViewModel : ViewModel() {
         val pasosAleatorios = (3000..8000).random()
 
         // Si tu SmartHealthRepository tiene funciones para cambiar el valor, descoméntalas aquí:
-        SmartHealthRepository.actualizarFC(fcAleatoria)
+        viewModelScope.launch {
+            SmartHealthRepository.actualizarFC(fcAleatoria)
+        }
         SmartHealthRepository.actualizarPasos(pasosAleatorios)
     }
 }

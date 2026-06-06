@@ -34,7 +34,7 @@ fun DashboardScreen(
     // Convierte los StateFlow del ViewModel en Estados reactivos de Compose
     val fc by viewModel.fc.collectAsState()
     val pasos by viewModel.pasos.collectAsState()
-    val historial = viewModel.historial
+    val historial by viewModel.historial.collectAsState()
 
     SmartHealthMonitorTheme {
         Scaffold(
