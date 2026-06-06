@@ -22,6 +22,7 @@ import edu.mx.cmjg.smarthealthmonitor.LoginScreen
 import edu.mx.cmjg.smarthealthmonitor.ui.components.DashboardScreen
 import edu.mx.cmjg.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 import androidx.compose.material3.ExperimentalMaterial3Api
+import edu.mx.cmjg.smarthealthmonitor.ui.screens.HistorialScreen
 @Composable
 fun SmartHealthNavGraph() {
     val navController = rememberNavController()
@@ -55,10 +56,7 @@ fun SmartHealthNavGraph() {
         }
         // ── Historial ──────────────────────────────────
         composable(Screen.Historial.route) {
-            // TODO Ejercicio extra: HistorialScreen completo
-            // Por ahora: pantalla temporal con Back
-            PantallaEnConstruccion(
-                titulo = "Historial completo",
+            HistorialScreen(
                 onBack = { navController.popBackStack() }
             )
         }

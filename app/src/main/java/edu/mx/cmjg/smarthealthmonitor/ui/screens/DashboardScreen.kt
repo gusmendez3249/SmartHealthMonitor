@@ -79,7 +79,7 @@ fun DashboardScreen(
                         valor      = "$fc",
                         unidad     = "bpm",
                         label      = "Frecuencia cardíaca",
-                        colorValor = if (fc < 110) Color.Blue else Color.Red
+                        colorValor = if (fc in 60..100) Color.Blue else Color.Red
                     )
                 }
                 // ── Tarjeta Pasos ─────────────────────────
