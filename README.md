@@ -1,30 +1,33 @@
 # SmartHealth Monitor
+![Android CI](https://img.shields.io/badge/Android-API26+-green)
+![Compose](https://img.shields.io/badge/Jetpack%20Compose-MD3-blue)
  
-Aplicación Android multiplataforma para monitoreo de salud personal.
-Desarrollada como proyecto integrador en UTNG — 9° Cuatrimestre 2025.
+Aplicación Android de monitoreo de salud personal en tiempo real.
+Desarrollada como proyecto integrador — UTNG 9° Cuatrimestre 2025.
  
 ## Stack tecnológico
-- Kotlin + Jetpack Compose
-- Material Design 3
-- Wearable Data Layer API (Wear OS)
-- Android TV / Leanback + Media3
-- Jetpack Navigation + Room + StateFlow
+| Tecnología | Uso |
+|---|---|
+| Kotlin + Jetpack Compose | UI declarativa con Material Design 3 |
+| Wearable Data Layer API  | Comunicación reloj ↔ teléfono (BLE) |
+| Health Services API     | Sensor FC real en background (Wear OS) |
+| Room Database           | Historial persistente de lecturas FC |
+| Jetpack Navigation      | NavHost entre 4 pantallas |
+| GitHub + Conventional Commits | Control de versiones profesional |
  
-## Pantallas implementadas
-- [x] LoginScreen — S4
-- [x] DashboardScreen — S5
-- [ ] Historial + wearable real — S6
-- [ ] Android TV — S10-S12
+## Pantallas
+| Pantalla | Descripción |
+|---|---|
+| LoginScreen | Autenticación con validación y State |
+| DashboardScreen | FC y Pasos en tiempo real del wearable |
+| HistorialScreen | Lecturas persistidas en Room con Flow reactivo |
+| AlertaScreen | AlertDialog MD3 + Snackbar de confirmación |
+ 
+## Capturas de pantalla
+![Login](screenshots/login.png)
+![Dashboard](screenshots/dashboard.png)
+![Historial](screenshots/historial.png)
+![Alerta](screenshots/alerta.png)
  
 ## Autor
-Juan Gustavo Ángel Cruz Méndez — UTNG — gustavoangelc2005@gmail.com
-
-## 📸 Evidencia de Funcionamiento
-
-A continuación se muestran las capturas de la interfaz de usuario ejecutándose en el emulador:
-
- <p align="center">
-  <img src="https://github.com/user-attachments/assets/d337a0ef-da81-4ee0-96dc-3e4060016bfb" width="300" alt="Dashboard Screen">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/user-attachments/assets/e7d68eb8-a6b2-44c0-8a47-467c161cf6bb" width="300" alt="Vista del Emulador">
-</p>
+Nombre Apellido — UTNG — Ing. en Desarrollo y Gestión de Software
