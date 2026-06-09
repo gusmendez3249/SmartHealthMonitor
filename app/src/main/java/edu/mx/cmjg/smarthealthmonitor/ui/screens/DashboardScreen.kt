@@ -16,9 +16,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel // Importación para inyección automática
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.launch
 import edu.mx.cmjg.smarthealthmonitor.BuildConfig
 import edu.mx.cmjg.smarthealthmonitor.data.models.LecturaFC
 import edu.mx.cmjg.smarthealthmonitor.data.models.MockData
+import edu.mx.cmjg.smarthealthmonitor.ui.screens.AlertaScreen
 import edu.mx.cmjg.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 import edu.mx.cmjg.smarthealthmonitor.ui.viewmodel.DashboardViewModel
 // Asegúrate de importar el repositorio si se encuentra en otra ruta:
@@ -36,8 +42,31 @@ fun DashboardScreen(
     val pasos by viewModel.pasos.collectAsState()
     val historial by viewModel.historial.collectAsState()
 
+    // ── Estado del diálogo y Snackbar ──────────────────────
+    var mostrarAlerta by remember { mutableStateOf(false) }
+    val snackbarHost  = remember { SnackbarHostState() }
+    val scope         = rememberCoroutineScope()
+
+    // ── Diálogo condicional ────────────────────────────────
+    if (mostrarAlerta) {
+        AlertaScreen(
+            fc          = fc,
+            onDismiss   = { mostrarAlerta = false },
+            onConfirmar = {
+                mostrarAlerta = false
+                scope.launch {
+                    snackbarHost.showSnackbar(
+                        message  = "✅ Alerta enviada a tus contactos de emergencia",
+                        duration = SnackbarDuration.Long
+                    )
+                }
+            }
+        )
+    }
+
     SmartHealthMonitorTheme {
         Scaffold(
+            snackbarHost = { SnackbarHost(hostState = snackbarHost) },
             topBar = {
                 TopAppBar(
                     title = {
@@ -54,7 +83,7 @@ fun DashboardScreen(
             },
             floatingActionButton = {
                 FloatingActionButton(
-                    onClick       = onAlertClick,
+                    onClick       = { mostrarAlerta = true },
                     containerColor = MaterialTheme.colorScheme.error
                 ) {
                     Icon(
