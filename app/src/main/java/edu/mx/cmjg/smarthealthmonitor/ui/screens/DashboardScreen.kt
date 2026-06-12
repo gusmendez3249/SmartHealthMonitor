@@ -11,7 +11,6 @@ import androidx.compose.runtime.collectAsState // Importación para StateFlow
 import androidx.compose.runtime.getValue        // Importación para delegación 'by'
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -108,7 +107,7 @@ fun DashboardScreen(
                         valor      = "$fc",
                         unidad     = "bpm",
                         label      = "Frecuencia cardíaca",
-                        colorValor = if (fc in 60..100) Color.Blue else Color.Red
+                        colorValor = if (fc in 60..100) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error
                     )
                 }
                 // ── Tarjeta Pasos ─────────────────────────
