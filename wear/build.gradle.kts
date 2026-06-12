@@ -56,6 +56,7 @@ dependencies {
     implementation("androidx.wear.compose:compose-material:1.3.1")
     implementation("androidx.wear.compose:compose-foundation:1.3.1")
     implementation("androidx.wear.compose:compose-navigation:1.3.1")
+    implementation(libs.androidx.material.icons.extended)
     // Horologist (utilidades Wear OS de Google)
     implementation("com.google.android.horologist:horologist-compose-layout:0.6.17")
     implementation("com.google.android.horologist:horologist-compose-material:0.6.17")

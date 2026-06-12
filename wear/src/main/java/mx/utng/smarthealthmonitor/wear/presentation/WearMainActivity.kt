@@ -35,7 +35,7 @@ class WearMainActivity : ComponentActivity(), SensorEventListener {
 
         setContent {
             SmartHealthWearTheme {
-                WearDashboardScreen()
+                SmartHealthWearNavGraph()
             }
         }
     }
