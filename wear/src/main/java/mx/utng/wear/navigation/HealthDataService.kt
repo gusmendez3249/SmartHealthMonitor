@@ -24,6 +24,7 @@ class HealthDataService : PassiveListenerService() {
         fcDataPoints.forEach { dataPoint ->
             if (dataPoint is SampleDataPoint<Double>) {
                 val bpm = dataPoint.value.toInt()
+                mx.utng.smarthealthmonitor.wear.data.SmartHealthRepository.actualizarFC(bpm)
                 scope.launch { wearDataSender.enviarFC(bpm) }
             }
         }
@@ -41,7 +42,7 @@ class HealthDataService : PassiveListenerService() {
 
             val config = PassiveListenerConfig.builder()
                 .setDataTypes(setOf(DataType.HEART_RATE_BPM))
-                .setShouldUserActivityInfoBeRequested(true)
+                .setShouldUserActivityInfoBeRequested(false)
                 .build()
 
             passiveClient.setPassiveListenerServiceAsync(

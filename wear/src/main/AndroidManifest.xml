@@ -17,7 +17,7 @@
         <meta-data android:name="com.google.android.wearable.standalone" android:value="true"/>
 
         <activity
-            android:name=".WearMainActivity"
+            android:name=".presentation.WearMainActivity"
             android:exported="true"
             android:theme="@android:style/Theme.DeviceDefault">
             <intent-filter>
@@ -28,9 +28,8 @@
 
         <!-- En <application> del AndroidManifest.xml del módulo wear -->
         <service
-            android:name=".navigation.HealthDataService"
-            android:exported="true"
-            android:permission="com.google.android.wearable.permission.BIND_LISTENER">
+            android:name="mx.utng.wear.navigation.HealthDataService"
+            android:exported="true">
             <intent-filter>
                 <action android:name="androidx.health.services.client.PASSIVE_LISTENER" />
             </intent-filter>
