@@ -24,6 +24,7 @@ import androidx.wear.compose.foundation.lazy.AutoCenteringParams
 @Composable
 fun WearDashboardScreen(
     onAlertClick: () -> Unit = {},
+    onHistorialClick: () -> Unit = {},
     viewModel: WearDashboardViewModel = viewModel()
 ) {
     val fc by viewModel.fc.collectAsState()
@@ -58,6 +59,14 @@ fun WearDashboardScreen(
                     colors = ChipDefaults.primaryChipColors(
                         backgroundColor = MaterialTheme.colors.error
                     ),
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+            // Item 3: Chip de Historial
+            item {
+                Chip(
+                    label = { Text("📋 Historial") },
+                    onClick = onHistorialClick,
                     modifier = Modifier.fillMaxWidth()
                 )
             }
