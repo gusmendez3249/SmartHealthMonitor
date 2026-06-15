@@ -12,6 +12,14 @@ object SmartHealthRepository {
         _fcFlow.value = bpm
     }
 
+    fun obtenerHistorial() = kotlinx.coroutines.flow.flowOf(
+        listOf(
+            mx.utng.smarthealthmonitor.wear.presentation.LecturaFC(1, 72, true, "08:00"),
+            mx.utng.smarthealthmonitor.wear.presentation.LecturaFC(2, 120, false, "09:30"),
+            mx.utng.smarthealthmonitor.wear.presentation.LecturaFC(3, 75, true, "10:00")
+        )
+    )
+
     fun startMeasureClient(context: android.content.Context) {
         val measureClient = androidx.health.services.client.HealthServices.getClient(context).measureClient
         measureClient.registerMeasureCallback(
