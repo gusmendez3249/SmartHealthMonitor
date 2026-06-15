@@ -60,6 +60,12 @@ dependencies {
     // Horologist (utilidades Wear OS de Google)
     implementation("com.google.android.horologist:horologist-compose-layout:0.6.17")
     implementation("com.google.android.horologist:horologist-compose-material:0.6.17")
+    
+    // Jetpack WatchFace API
+    implementation("androidx.wear.watchface:watchface:1.2.1")
+    implementation("androidx.wear.watchface:watchface-complications-rendering:1.2.1")
+    implementation("androidx.wear.watchface:watchface-style:1.2.1")
+
     // Nota: No se puede depender directamente del módulo :app porque ambos son aplicaciones.
     // implementation(project(":app"))
 }
