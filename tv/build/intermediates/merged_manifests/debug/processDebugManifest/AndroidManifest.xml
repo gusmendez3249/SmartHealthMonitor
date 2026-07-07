@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mx.utng.smarthealthmonitor.tv" >
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="35" />
+    <!-- Declarar que es una app de TV -->
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+    <!-- No requiere pantalla táctil -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:banner="@drawable/banner_tv"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:testOnly="true"
+        android:theme="@style/Theme.SmartHealthTV" > <!-- 320x180dp -->
+        <activity
+            android:name="mx.utng.smarthealthmonitor.tv.MainActivity"
+            android:exported="true"
+            android:label="SmartHealth TV" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- Categoría LEANBACK_LAUNCHER: aparece en launcher TV -->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="mx.utng.smarthealthmonitor.tv.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
