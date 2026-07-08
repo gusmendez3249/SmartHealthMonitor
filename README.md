@@ -40,5 +40,32 @@ Desarrollada como proyecto integrador — UTNG 9° Cuatrimestre 2025.
 ![WatchFace](screenshots/watchface.png)
 ![WearDashboard](screenshots/wear_dashboard.png)
 
+## SmartHealth Monitor — Arquitectura completa
+ 
+```text
+Sensor FC (PPG)
+    ↓ Health Services API
+Wear OS (reloj) — WearDashboardScreen
+    ↓ BLE MessageClient (Wearable Data Layer)
+Android (teléfono) — Dashboard + Historial + Alerta
+    ├── Room DB (SQLite) — historial persistente
+    ├── StateFlow → DashboardViewModel → Compose UI
+    └── CastManager → Chromecast / Smart TV
+         ↓ Cast SDK (WiFi)
+TV (Chromecast/Android TV)
+    ├── App nativa (Leanback): BrowseFragment + DetailFragment + ExoPlayer
+    └── Cast Receiver: datos FC en tiempo real
+```
+ 
+## Historial de versiones
+| Tag | Descripción |
+|-----|-------------|
+| v1.0.0 | Unidad I: Android teléfono completo |
+| v1.1.0 | Wear OS básico |
+| v1.2.0 | Wear OS avanzado + WatchFace |
+| v2.0.0 | Android TV Leanback |
+| v2.1.0 | TV Detail + Media3/ExoPlayer |
+| v2.2.0 | Cast SDK + integración completa |
+
 ## Autor
 Nombre Apellido — UTNG — Ing. en Desarrollo y Gestión de Software
