@@ -72,7 +72,14 @@ class DetailFragment : DetailsSupportFragment(),
     override fun onActionClicked(action: Action) {
         when (action.id) {
             ACTION_PLAY -> {
-                Toast.makeText(context, "Reproducir", Toast.LENGTH_SHORT).show()
+                val playback = PlaybackFragment.newInstance(
+                    url   = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+                    title = "Alerta FC"
+                )
+                parentFragmentManager.beginTransaction()
+                    .replace(mx.utng.smarthealthmonitor.tv.R.id.main_browse_fragment, playback)
+                    .addToBackStack(null)
+                    .commit()
             }
             ACTION_BACK -> requireActivity().onBackPressed()
             ACTION_TREND -> {

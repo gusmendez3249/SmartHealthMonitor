@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-28:/values-land/values-land.xml",
+            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-33:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\dcc56bc811624a6d308538c34ece522f\\transformed\\appcompat-1.0.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\6fc204150bd7c98421fc48abffe16135\\transformed\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

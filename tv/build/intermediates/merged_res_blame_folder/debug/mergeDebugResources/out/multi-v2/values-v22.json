@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-28:/values-v22/values-v22.xml",
+            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-33:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\f74424edc44cd28d2e795727b9404be4\\transformed\\leanback-1.2.0\\res\\values-v22\\values-v22.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,107",
-                        "endColumns": "51,53",
-                        "endOffsets": "102,156"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\dcc56bc811624a6d308538c34ece522f\\transformed\\appcompat-1.0.0\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\6fc204150bd7c98421fc48abffe16135\\transformed\\appcompat-1.1.0\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
@@ -30,6 +20,16 @@
                         "endLines": "4,5,10,15",
                         "endColumns": "74,86,12,12",
                         "endOffsets": "231,318,588,870"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\f74424edc44cd28d2e795727b9404be4\\transformed\\leanback-1.2.0\\res\\values-v22\\values-v22.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,107",
+                        "endColumns": "51,53",
+                        "endOffsets": "102,156"
                     }
                 }
             ]
