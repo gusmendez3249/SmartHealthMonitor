@@ -1,0 +1,10 @@
+R_DEF: Internal format may change without notice
+local
+color sh_amber
+color sh_dark
+color sh_error
+color sh_primary
+drawable banner_tv
+id main_browse_fragment
+layout activity_main
+style Theme.SmartHealthTV

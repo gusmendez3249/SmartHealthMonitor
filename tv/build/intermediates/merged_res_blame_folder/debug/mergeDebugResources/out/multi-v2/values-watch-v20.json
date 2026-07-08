@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-28:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\dcc56bc811624a6d308538c34ece522f\\transformed\\appcompat-1.0.0\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}
