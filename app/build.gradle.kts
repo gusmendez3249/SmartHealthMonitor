@@ -74,4 +74,11 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
     implementation(libs.androidx.material.icons.extended)
+
+    // MediaRouter — el UI del botón de Cast
+    implementation("androidx.mediarouter:mediarouter:1.7.0")
+    // Cast Framework — el protocolo de comunicación
+    implementation("com.google.android.gms:play-services-cast-framework:21.5.0")
+    // AppCompat necesario para el tema del botón de Cast
+    implementation("androidx.appcompat:appcompat:1.6.1")
 }

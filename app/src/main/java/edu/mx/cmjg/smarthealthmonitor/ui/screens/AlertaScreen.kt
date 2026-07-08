@@ -29,10 +29,26 @@ fun AlertaScreen(
             )
         },
         title = {
-            Text(
-                text  = "Enviar alerta de emergencia",
-                style = MaterialTheme.typography.headlineSmall
-            )
+            Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                Text(
+                    text  = "Enviar alerta de emergencia",
+                    style = MaterialTheme.typography.headlineSmall,
+                    modifier = Modifier.weight(1f)
+                )
+                androidx.compose.ui.viewinterop.AndroidView(
+                    factory = { ctx ->
+                        val themedCtx = androidx.appcompat.view.ContextThemeWrapper(ctx, androidx.appcompat.R.style.Theme_AppCompat_NoActionBar)
+                        androidx.mediarouter.app.MediaRouteButton(themedCtx).apply {
+                            try {
+                                com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(themedCtx, this)
+                            } catch (e: Exception) {
+                                android.util.Log.e("CastButton", "Error setting up MediaRouteButton", e)
+                            }
+                        }
+                    },
+                    modifier = Modifier.size(48.dp)
+                )
+            }
         },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
