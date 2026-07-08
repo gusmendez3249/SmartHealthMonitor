@@ -17,6 +17,7 @@ fun AlertaScreen(
     onConfirmar: () -> Unit         // Confirmar y enviar alerta
 ) {
     var enviando by remember { mutableStateOf(false) }
+    val ctx = androidx.compose.ui.platform.LocalContext.current
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -67,6 +68,13 @@ fun AlertaScreen(
             Button(
                 onClick = {
                     enviando = true
+                    if (edu.mx.cmjg.smarthealthmonitor.cast.CastManager.isConnected(ctx)) {
+                        edu.mx.cmjg.smarthealthmonitor.cast.CastManager.reproducirEnTV(
+                            context = ctx,
+                            url     = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+                            titulo  = "⚠ Alerta FC $fc bpm"
+                        )
+                    }
                     onConfirmar()
                 },
                 enabled = !enviando,
