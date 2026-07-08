@@ -646,6 +646,7 @@ int color secondary_text_disabled_material_dark 0x7f050081
 int color secondary_text_disabled_material_light 0x7f050082
 int color sh_amber 0x7f050083
 int color sh_dark 0x7f050084
+int color sh_error 0x7f05008e
 int color sh_primary 0x7f050085
 int color switch_thumb_disabled_material_dark 0x7f050086
 int color switch_thumb_disabled_material_light 0x7f050087

@@ -1,6 +1,7 @@
 mx.utng.smarthealthmonitor.tv
 color sh_amber
 color sh_dark
+color sh_error
 color sh_primary
 drawable banner_tv
 id main_browse_fragment

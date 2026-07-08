@@ -1,17 +1,47 @@
 package mx.utng.smarthealthmonitor.tv
-
+ 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-
-class MainFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+import androidx.core.content.ContextCompat
+import androidx.leanback.app.BrowseSupportFragment
+import androidx.leanback.widget.*
+import mx.utng.smarthealthmonitor.data.MockData
+ 
+class MainFragment : BrowseSupportFragment() {
+ 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+ 
+        // Configuración del BrowseFragment
+        title        = "SmartHealth TV"
+        headersState = HEADERS_ENABLED
+        isHeadersTransitionOnBackEnabled = true
+ 
+        // Color de la marca en el sidebar usando ContextCompat para evitar deprecaciones
+        brandColor = ContextCompat.getColor(requireContext(), R.color.sh_primary)
+ 
+        cargarFilas()
+    }
+ 
+    private fun cargarFilas() {
+        val rowsAdapter = ArrayObjectAdapter(ListRowPresenter())
+ 
+        // ── Fila 1: Estado actual (FC + Pasos) ───────────
+        val estadoAdapter = ArrayObjectAdapter(FCCardPresenter())
+        estadoAdapter.add(LecturaFC(id=0, valorBpm=88, hora="Ahora"))
+        estadoAdapter.add(LecturaFC(id=1, valorBpm=4250, hora="Pasos"))
+        rowsAdapter.add(ListRow(HeaderItem("Estado actual"), estadoAdapter))
+ 
+        // ── Fila 2: Historial de FC ────────────────────
+        val histAdapter = ArrayObjectAdapter(FCCardPresenter())
+        MockData.historialFC.forEach { histAdapter.add(it) }
+        rowsAdapter.add(ListRow(HeaderItem("Historial FC"), histAdapter))
+        
+        // ── Fila 3: Alertas recientes (Reto adicional) ──
+        val alertasAdapter = ArrayObjectAdapter(FCCardPresenter())
+        MockData.alertasRecientes.forEach { alertasAdapter.add(it) }
+        rowsAdapter.add(ListRow(HeaderItem("Alertas recientes"), alertasAdapter))
+ 
+        this.adapter = rowsAdapter
     }
 }

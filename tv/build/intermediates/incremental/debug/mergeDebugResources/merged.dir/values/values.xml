@@ -120,9 +120,10 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <color name="sh_amber">#FFC107</color>
-    <color name="sh_dark">#121212</color>
-    <color name="sh_primary">#009688</color>
+    <color name="sh_amber">#D4860A</color>
+    <color name="sh_dark">#0D1117</color>
+    <color name="sh_error">#B3261E</color>
+    <color name="sh_primary">#1B4F8A</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>

@@ -1,5 +1,6 @@
 int color sh_amber 0x0
 int color sh_dark 0x0
+int color sh_error 0x0
 int color sh_primary 0x0
 int drawable banner_tv 0x0
 int id main_browse_fragment 0x0
