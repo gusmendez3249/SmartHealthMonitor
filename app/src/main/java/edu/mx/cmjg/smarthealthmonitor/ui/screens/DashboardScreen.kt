@@ -45,6 +45,34 @@ fun DashboardScreen(
     var mostrarAlerta by remember { mutableStateOf(false) }
     val snackbarHost  = remember { SnackbarHostState() }
     val scope         = rememberCoroutineScope()
+    val context       = androidx.compose.ui.platform.LocalContext.current
+
+    // ── Listener de conexión Cast (Reto Adicional) ─────────
+    androidx.compose.runtime.DisposableEffect(Unit) {
+        val listener = object : com.google.android.gms.cast.framework.SessionManagerListener<com.google.android.gms.cast.framework.CastSession> {
+            override fun onSessionStarted(session: com.google.android.gms.cast.framework.CastSession, sessionId: String) {
+                scope.launch { snackbarHost.showSnackbar("SmartHealth conectado a ${session.castDevice?.friendlyName}") }
+            }
+            override fun onSessionResumed(session: com.google.android.gms.cast.framework.CastSession, wasSuspended: Boolean) {
+                scope.launch { snackbarHost.showSnackbar("SmartHealth conectado a ${session.castDevice?.friendlyName}") }
+            }
+            override fun onSessionEnded(session: com.google.android.gms.cast.framework.CastSession, error: Int) {
+                scope.launch { snackbarHost.showSnackbar("Desconectado de Cast") }
+            }
+            override fun onSessionEnding(session: com.google.android.gms.cast.framework.CastSession) {}
+            override fun onSessionStartFailed(session: com.google.android.gms.cast.framework.CastSession, error: Int) {}
+            override fun onSessionStarting(session: com.google.android.gms.cast.framework.CastSession) {}
+            override fun onSessionResuming(session: com.google.android.gms.cast.framework.CastSession, sessionId: String) {}
+            override fun onSessionResumeFailed(session: com.google.android.gms.cast.framework.CastSession, error: Int) {}
+            override fun onSessionSuspended(session: com.google.android.gms.cast.framework.CastSession, reason: Int) {}
+        }
+        val castContext = try { com.google.android.gms.cast.framework.CastContext.getSharedInstance(context) } catch (e: Exception) { null }
+        castContext?.sessionManager?.addSessionManagerListener(listener, com.google.android.gms.cast.framework.CastSession::class.java)
+
+        onDispose {
+            castContext?.sessionManager?.removeSessionManagerListener(listener, com.google.android.gms.cast.framework.CastSession::class.java)
+        }
+    }
 
     // ── Diálogo condicional ────────────────────────────────
     if (mostrarAlerta) {
@@ -77,7 +105,22 @@ fun DashboardScreen(
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor    = MaterialTheme.colorScheme.primary,
                         titleContentColor = MaterialTheme.colorScheme.onPrimary
-                    )
+                    ),
+                    actions = {
+                        androidx.compose.ui.viewinterop.AndroidView(
+                            factory = { ctx ->
+                                val themedCtx = androidx.appcompat.view.ContextThemeWrapper(ctx, androidx.appcompat.R.style.Theme_AppCompat_NoActionBar)
+                                androidx.mediarouter.app.MediaRouteButton(themedCtx).apply {
+                                    try {
+                                        com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(themedCtx, this)
+                                    } catch (e: Exception) {
+                                        android.util.Log.e("CastButton", "Error setting up MediaRouteButton", e)
+                                    }
+                                }
+                            },
+                            modifier = Modifier.size(48.dp)
+                        )
+                    }
                 )
             },
             floatingActionButton = {

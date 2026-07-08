@@ -17,6 +17,7 @@ fun AlertaScreen(
     onConfirmar: () -> Unit         // Confirmar y enviar alerta
 ) {
     var enviando by remember { mutableStateOf(false) }
+    val ctx = androidx.compose.ui.platform.LocalContext.current
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -29,10 +30,26 @@ fun AlertaScreen(
             )
         },
         title = {
-            Text(
-                text  = "Enviar alerta de emergencia",
-                style = MaterialTheme.typography.headlineSmall
-            )
+            Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                Text(
+                    text  = "Enviar alerta de emergencia",
+                    style = MaterialTheme.typography.headlineSmall,
+                    modifier = Modifier.weight(1f)
+                )
+                androidx.compose.ui.viewinterop.AndroidView(
+                    factory = { ctx ->
+                        val themedCtx = androidx.appcompat.view.ContextThemeWrapper(ctx, androidx.appcompat.R.style.Theme_AppCompat_NoActionBar)
+                        androidx.mediarouter.app.MediaRouteButton(themedCtx).apply {
+                            try {
+                                com.google.android.gms.cast.framework.CastButtonFactory.setUpMediaRouteButton(themedCtx, this)
+                            } catch (e: Exception) {
+                                android.util.Log.e("CastButton", "Error setting up MediaRouteButton", e)
+                            }
+                        }
+                    },
+                    modifier = Modifier.size(48.dp)
+                )
+            }
         },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -51,6 +68,13 @@ fun AlertaScreen(
             Button(
                 onClick = {
                     enviando = true
+                    if (edu.mx.cmjg.smarthealthmonitor.cast.CastManager.isConnected(ctx)) {
+                        edu.mx.cmjg.smarthealthmonitor.cast.CastManager.reproducirEnTV(
+                            context = ctx,
+                            url     = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+                            titulo  = "⚠ Alerta FC $fc bpm"
+                        )
+                    }
                     onConfirmar()
                 },
                 enabled = !enviando,

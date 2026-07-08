@@ -1,7 +1,7 @@
 package edu.mx.cmjg.smarthealthmonitor
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import edu.mx.cmjg.smarthealthmonitor.navigation.SmartHealthNavGraph
 import edu.mx.cmjg.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

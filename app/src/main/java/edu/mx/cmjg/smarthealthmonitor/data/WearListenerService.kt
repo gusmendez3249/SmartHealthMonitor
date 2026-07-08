@@ -24,6 +24,8 @@ class WearListenerService : WearableListenerService() {
                 kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.Dispatchers.IO).launch {
                     SmartHealthRepository.actualizarFC(bpm)
                 }
+                // Enviar al Cast si hay sesión activa
+                edu.mx.cmjg.smarthealthmonitor.cast.CastManager.enviarFC(applicationContext, bpm)
             }
             PATH_PASOS -> {
                 val pasos = data.toIntOrNull() ?: return
