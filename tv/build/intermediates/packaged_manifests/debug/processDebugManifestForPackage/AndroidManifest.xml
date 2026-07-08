@@ -14,6 +14,10 @@
         android:name="android.hardware.touchscreen"
         android:required="false" />
 
+    <!-- Permiso para que ExoPlayer pueda descargar el audio de internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <permission
         android:name="mx.utng.smarthealthmonitor.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />

@@ -30,4 +30,12 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
     implementation("androidx.fragment:fragment-ktx:1.8.3")
+    
+    // Media3 + ExoPlayer para Android TV
+    val media3Version = "1.4.1"
+    implementation("androidx.media3:media3-exoplayer:$media3Version")
+    implementation("androidx.media3:media3-ui:$media3Version")
+    implementation("androidx.leanback:leanback-preference:1.2.0")
+    // Corrección para Media3: Usamos media3-ui-leanback en lugar de exoplayer-leanback (v2) para evitar conflictos
+    implementation("androidx.media3:media3-ui-leanback:$media3Version")
 }

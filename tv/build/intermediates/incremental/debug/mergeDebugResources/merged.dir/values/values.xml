@@ -1,14 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="exo_controls_playback_speeds">
+    <item>0.25x</item>
+    <item>0.5x</item>
+    <item>0.75x</item>
+    <item>Normal</item>
+    <item>1.25x</item>
+    <item>1.5x</item>
+    <item>2x</item>
+  </string-array>
+    <attr format="color" name="ad_marker_color"/>
+    <attr format="dimension" name="ad_marker_width"/>
+    <attr format="boolean" name="animation_enabled"/>
+    <attr format="enum" name="artwork_display_mode">
+    <enum name="off" value="0"/>
+    <enum name="fit" value="1"/>
+    <enum name="fill" value="2"/>
+  </attr>
+    <attr format="boolean" name="auto_show"/>
+    <attr format="color" name="backgroundTint"/>
+    <attr format="enum" name="bar_gravity">
+    <enum name="center" value="0"/>
+    <enum name="bottom" value="1"/>
+  </attr>
+    <attr format="dimension" name="bar_height"/>
+    <attr format="color" name="buffered_color"/>
+    <attr format="reference" name="controller_layout_id"/>
+    <attr format="reference" name="default_artwork"/>
     <attr format="reference" name="drawerArrowStyle"/>
+    <attr format="reference" name="fastforward_icon"/>
+    <attr format="reference" name="fullscreen_enter_icon"/>
+    <attr format="reference" name="fullscreen_exit_icon"/>
     <attr format="dimension" name="height"/>
+    <attr format="boolean" name="hide_during_ads"/>
+    <attr format="boolean" name="hide_on_touch"/>
+    <attr format="enum" name="image_display_mode">
+    <enum name="fit" value="0"/>
+    <enum name="fill" value="1"/>
+  </attr>
     <attr format="boolean" name="isLightTheme"/>
+    <attr format="boolean" name="keep_content_on_player_reset"/>
     <attr format="reference" name="nestedScrollViewStyle"/>
+    <attr format="reference" name="next_icon"/>
+    <attr format="reference" name="pause_icon"/>
+    <attr format="reference" name="play_icon"/>
+    <attr format="color" name="played_ad_marker_color"/>
+    <attr format="color" name="played_color"/>
+    <attr format="reference" name="player_layout_id"/>
+    <attr format="reference" name="previous_icon"/>
     <attr format="reference" name="recyclerViewStyle"/>
+    <attr format="reference" name="repeat_all_icon"/>
+    <attr format="reference" name="repeat_off_icon"/>
+    <attr format="reference" name="repeat_one_icon"/>
+    <attr name="repeat_toggle_modes">
+    <flag name="none" value="0"/>
+    <flag name="one" value="1"/>
+    <flag name="all" value="2"/>
+  </attr>
+    <attr format="enum" name="resize_mode">
+    <enum name="fit" value="0"/>
+    <enum name="fixed_width" value="1"/>
+    <enum name="fixed_height" value="2"/>
+    <enum name="fill" value="3"/>
+    <enum name="zoom" value="4"/>
+  </attr>
+    <attr format="reference" name="rewind_icon"/>
+    <attr format="color" name="scrubber_color"/>
+    <attr format="dimension" name="scrubber_disabled_size"/>
+    <attr format="dimension" name="scrubber_dragged_size"/>
+    <attr format="reference" name="scrubber_drawable"/>
+    <attr format="dimension" name="scrubber_enabled_size"/>
+    <attr format="enum" name="show_buffering">
+    <enum name="never" value="0"/>
+    <enum name="when_playing" value="1"/>
+    <enum name="always" value="2"/>
+  </attr>
+    <attr format="boolean" name="show_fastforward_button"/>
+    <attr format="boolean" name="show_next_button"/>
+    <attr format="boolean" name="show_previous_button"/>
+    <attr format="boolean" name="show_rewind_button"/>
+    <attr format="boolean" name="show_shuffle_button"/>
+    <attr format="boolean" name="show_subtitle_button"/>
+    <attr format="integer" name="show_timeout"/>
+    <attr format="boolean" name="show_vr_button"/>
+    <attr format="reference" name="shuffle_off_icon"/>
+    <attr format="reference" name="shuffle_on_icon"/>
+    <attr format="color" name="shutter_background_color"/>
+    <attr format="reference" name="subtitle_off_icon"/>
+    <attr format="reference" name="subtitle_on_icon"/>
+    <attr format="enum" name="surface_type">
+    <enum name="none" value="0"/>
+    <enum name="surface_view" value="1"/>
+    <enum name="texture_view" value="2"/>
+    <enum name="spherical_gl_surface_view" value="3"/>
+    <enum name="video_decoder_gl_surface_view" value="4"/>
+  </attr>
+    <attr format="integer" name="time_bar_min_update_interval"/>
     <attr format="string" name="title"/>
+    <attr format="dimension" name="touch_target_height"/>
+    <attr format="color" name="unplayed_color"/>
+    <attr format="boolean" name="use_artwork"/>
+    <attr format="boolean" name="use_controller"/>
+    <attr format="reference" name="vr_icon"/>
     <bool name="abc_action_bar_embed_tabs">true</bool>
     <bool name="abc_allow_stacked_button_bar">false</bool>
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -29,12 +126,21 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <color name="default_preference_brand_color_legacy">#FF37474F</color>
+    <color name="default_preference_window_background_legacy">#263238</color>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
     <color name="error_color_material_dark">#ff7043</color>
     <color name="error_color_material_light">#ff5722</color>
+    <color name="exo_black_opacity_60">#98000000</color>
+    <color name="exo_black_opacity_70">#B3000000</color>
+    <color name="exo_bottom_bar_background">#b0000000</color>
+    <color name="exo_edit_mode_background_color">#FFF4F3F0</color>
+    <color name="exo_styled_error_message_background">#80808080</color>
+    <color name="exo_white">#ffffff</color>
+    <color name="exo_white_opacity_70">#B3ffffff</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
@@ -80,6 +186,10 @@
     <color name="lb_playback_progress_color_no_theme">#ff40c4ff</color>
     <color name="lb_playback_progress_secondary_color_no_theme">#d3d3d3</color>
     <color name="lb_playback_secondary_progress_color">#33FFFFFF</color>
+    <color name="lb_preference_item_primary_text_color_default">#EEEEEE</color>
+    <color name="lb_preference_item_primary_text_color_disabled">#4DEEEEEE</color>
+    <color name="lb_preference_item_secondary_text_color_default">#B3EEEEEE</color>
+    <color name="lb_preference_item_secondary_text_color_disabled">#4DEEEEEE</color>
     <color name="lb_search_bar_hint">#FF888888</color>
     <color name="lb_search_bar_hint_speech_mode">#66222222</color>
     <color name="lb_search_bar_text">#80EEEEEE</color>
@@ -95,7 +205,7 @@
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
-    <color name="material_deep_teal_500">#ff009688</color>
+    <color name="material_deep_teal_500">#ff008577</color>
     <color name="material_grey_100">#fff5f5f5</color>
     <color name="material_grey_300">#ffe0e0e0</color>
     <color name="material_grey_50">#fffafafa</color>
@@ -106,6 +216,7 @@
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
+    <color name="preference_fallback_accent_color">#ff008577</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -178,6 +289,9 @@
     <dimen name="abc_edit_text_inset_horizontal_material">4dp</dimen>
     <dimen name="abc_edit_text_inset_top_material">10dp</dimen>
     <dimen name="abc_floating_window_z">16dp</dimen>
+    <dimen name="abc_list_item_height_large_material">80dp</dimen>
+    <dimen name="abc_list_item_height_material">64dp</dimen>
+    <dimen name="abc_list_item_height_small_material">48dp</dimen>
     <dimen name="abc_list_item_padding_horizontal_material">@dimen/abc_action_bar_content_inset_material</dimen>
     <dimen name="abc_panel_menu_list_width">296dp</dimen>
     <dimen name="abc_progress_bar_height_material">4dp</dimen>
@@ -214,6 +328,41 @@
     <dimen name="compat_notification_large_icon_max_width">320dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="exo_error_message_height">32dp</dimen>
+    <dimen name="exo_error_message_margin_bottom">64dp</dimen>
+    <dimen name="exo_error_message_text_padding_horizontal">12dp</dimen>
+    <dimen name="exo_error_message_text_padding_vertical">4dp</dimen>
+    <dimen name="exo_error_message_text_size">14sp</dimen>
+    <dimen name="exo_icon_horizontal_margin">5dp</dimen>
+    <dimen name="exo_icon_padding">2dp</dimen>
+    <dimen name="exo_icon_padding_bottom">18dp</dimen>
+    <dimen name="exo_icon_size">52dp</dimen>
+    <dimen name="exo_icon_text_size">9dp</dimen>
+    <dimen name="exo_media_button_height">52dp</dimen>
+    <dimen name="exo_media_button_width">71dp</dimen>
+    <dimen name="exo_setting_width">150dp</dimen>
+    <dimen name="exo_settings_height">52dp</dimen>
+    <dimen name="exo_settings_icon_size">24dp</dimen>
+    <dimen name="exo_settings_main_text_size">14sp</dimen>
+    <dimen name="exo_settings_offset">8dp</dimen>
+    <dimen name="exo_settings_sub_text_size">12sp</dimen>
+    <dimen name="exo_settings_text_height">24dp</dimen>
+    <dimen name="exo_small_icon_height">48dp</dimen>
+    <dimen name="exo_small_icon_horizontal_margin">2dp</dimen>
+    <dimen name="exo_small_icon_padding_horizontal">12dp</dimen>
+    <dimen name="exo_small_icon_padding_vertical">12dp</dimen>
+    <dimen name="exo_small_icon_width">48dp</dimen>
+    <dimen name="exo_styled_bottom_bar_height">60dp</dimen>
+    <dimen name="exo_styled_bottom_bar_margin_top">10dp</dimen>
+    <dimen name="exo_styled_bottom_bar_time_padding">10dp</dimen>
+    <dimen name="exo_styled_controls_padding">0dp</dimen>
+    <dimen name="exo_styled_minimal_controls_margin_bottom">4dp</dimen>
+    <dimen name="exo_styled_progress_bar_height">2dp</dimen>
+    <dimen name="exo_styled_progress_dragged_thumb_size">14dp</dimen>
+    <dimen name="exo_styled_progress_enabled_thumb_size">10dp</dimen>
+    <dimen name="exo_styled_progress_layout_height">48dp</dimen>
+    <dimen name="exo_styled_progress_margin_bottom">52dp</dimen>
+    <dimen name="exo_styled_progress_touch_target_height">48dp</dimen>
     <dimen name="fastscroll_default_thickness">8dp</dimen>
     <dimen name="fastscroll_margin">0dp</dimen>
     <dimen name="fastscroll_minimum_range">50dp</dimen>
@@ -436,6 +585,26 @@
     <dimen name="lb_playback_transport_thumbs_width">154dp</dimen>
     <dimen name="lb_playback_transport_time_margin">8dp</dimen>
     <dimen name="lb_playback_transport_time_margin_top">8dp</dimen>
+    <dimen name="lb_preference_category_padding_bottom">12dp</dimen>
+    <dimen name="lb_preference_category_padding_top">12dp</dimen>
+    <dimen name="lb_preference_category_text_size">12sp</dimen>
+    <dimen name="lb_preference_decor_elevation">6dp</dimen>
+    <dimen name="lb_preference_decor_title_container_elevation">2dp</dimen>
+    <dimen name="lb_preference_decor_title_margin_top">27dp</dimen>
+    <dimen name="lb_preference_decor_title_text_height">64dp</dimen>
+    <dimen name="lb_preference_decor_title_text_size">20sp</dimen>
+    <dimen name="lb_preference_item_icon_margin_end">16dp</dimen>
+    <dimen name="lb_preference_item_icon_size">24dp</dimen>
+    <dimen name="lb_preference_item_padding_end">56dp</dimen>
+    <dimen name="lb_preference_item_padding_start">24dp</dimen>
+    <dimen name="lb_preference_item_primary_text_margin_bottom">2dp</dimen>
+    <dimen name="lb_preference_item_primary_text_size">14sp</dimen>
+    <dimen name="lb_preference_item_secondary_text_size">12sp</dimen>
+    <dimen name="lb_preference_item_text_space_bottom">13dp</dimen>
+    <dimen name="lb_preference_item_text_space_top">14dp</dimen>
+    <dimen name="lb_preference_seekbar_padding_end">22dp</dimen>
+    <dimen name="lb_preference_seekbar_padding_start">0dp</dimen>
+    <dimen name="lb_preference_seekbar_value_width">36dp</dimen>
     <dimen name="lb_rounded_rect_corner_radius">2dp</dimen>
     <dimen name="lb_search_bar_edit_text_margin_start">24dp</dimen>
     <dimen name="lb_search_bar_height">60dp</dimen>
@@ -464,6 +633,7 @@
     <dimen name="lb_search_orb_margin_top">4dp</dimen>
     <dimen name="lb_search_orb_size">52dp</dimen>
     <dimen name="lb_search_orb_unfocused_z">2dp</dimen>
+    <dimen name="lb_settings_pane_width">360dp</dimen>
     <dimen name="lb_vertical_grid_padding_bottom">87dp</dimen>
     <dimen name="notification_action_icon_size">32dp</dimen>
     <dimen name="notification_action_text_size">13sp</dimen>
@@ -485,10 +655,11 @@
     <dimen name="picker_item_spacing">32dp</dimen>
     <dimen name="picker_separator_horizontal_padding">4dp</dimen>
     <dimen name="pinpicker_text_size">24sp</dimen>
-    <dimen name="subtitle_corner_radius">2dp</dimen>
-    <dimen name="subtitle_outline_width">2dp</dimen>
-    <dimen name="subtitle_shadow_offset">2dp</dimen>
-    <dimen name="subtitle_shadow_radius">2dp</dimen>
+    <dimen name="preference_dropdown_padding_start">0dp</dimen>
+    <dimen name="preference_icon_minWidth">0dp</dimen>
+    <dimen name="preference_seekbar_padding_horizontal">0dp</dimen>
+    <dimen name="preference_seekbar_padding_vertical">15dp</dimen>
+    <dimen name="preference_seekbar_value_minWidth">36dp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
     <dimen name="tooltip_margin">8dp</dimen>
@@ -497,6 +668,52 @@
     <dimen name="tooltip_vertical_padding">6.5dp</dimen>
     <dimen name="tooltip_y_offset_non_touch">0dp</dimen>
     <dimen name="tooltip_y_offset_touch">16dp</dimen>
+    <drawable name="exo_legacy_controls_fastforward">@drawable/exo_icon_fastforward</drawable>
+    <drawable name="exo_legacy_controls_fullscreen_enter">@drawable/exo_icon_fullscreen_enter</drawable>
+    <drawable name="exo_legacy_controls_fullscreen_exit">@drawable/exo_icon_fullscreen_exit</drawable>
+    <drawable name="exo_legacy_controls_next">@drawable/exo_icon_next</drawable>
+    <drawable name="exo_legacy_controls_pause">@drawable/exo_icon_pause</drawable>
+    <drawable name="exo_legacy_controls_play">@drawable/exo_icon_play</drawable>
+    <drawable name="exo_legacy_controls_previous">@drawable/exo_icon_previous</drawable>
+    <drawable name="exo_legacy_controls_repeat_all">@drawable/exo_icon_repeat_all</drawable>
+    <drawable name="exo_legacy_controls_repeat_off">@drawable/exo_icon_repeat_off</drawable>
+    <drawable name="exo_legacy_controls_repeat_one">@drawable/exo_icon_repeat_one</drawable>
+    <drawable name="exo_legacy_controls_rewind">@drawable/exo_icon_rewind</drawable>
+    <drawable name="exo_legacy_controls_shuffle_off">@drawable/exo_icon_shuffle_off</drawable>
+    <drawable name="exo_legacy_controls_shuffle_on">@drawable/exo_icon_shuffle_on</drawable>
+    <drawable name="exo_legacy_controls_vr">@drawable/exo_icon_vr</drawable>
+    <drawable name="exo_notification_fastforward">@drawable/exo_icon_fastforward</drawable>
+    <drawable name="exo_notification_next">@drawable/exo_icon_next</drawable>
+    <drawable name="exo_notification_pause">@drawable/exo_icon_pause</drawable>
+    <drawable name="exo_notification_play">@drawable/exo_icon_play</drawable>
+    <drawable name="exo_notification_previous">@drawable/exo_icon_previous</drawable>
+    <drawable name="exo_notification_rewind">@drawable/exo_icon_rewind</drawable>
+    <drawable name="exo_notification_small_icon">@drawable/exo_icon_circular_play</drawable>
+    <drawable name="exo_notification_stop">@drawable/exo_icon_stop</drawable>
+    <drawable name="exo_styled_controls_audiotrack">@drawable/exo_ic_audiotrack</drawable>
+    <drawable name="exo_styled_controls_check">@drawable/exo_ic_check</drawable>
+    <drawable name="exo_styled_controls_fastforward">@drawable/exo_ic_forward</drawable>
+    <drawable name="exo_styled_controls_fullscreen_enter">@drawable/exo_ic_fullscreen_enter</drawable>
+    <drawable name="exo_styled_controls_fullscreen_exit">@drawable/exo_ic_fullscreen_exit</drawable>
+    <drawable name="exo_styled_controls_next">@drawable/exo_ic_skip_next</drawable>
+    <drawable name="exo_styled_controls_overflow_hide">@drawable/exo_ic_chevron_left</drawable>
+    <drawable name="exo_styled_controls_overflow_show">@drawable/exo_ic_chevron_right</drawable>
+    <drawable name="exo_styled_controls_pause">@drawable/exo_ic_pause_circle_filled</drawable>
+    <drawable name="exo_styled_controls_play">@drawable/exo_ic_play_circle_filled</drawable>
+    <drawable name="exo_styled_controls_previous">@drawable/exo_ic_skip_previous</drawable>
+    <drawable name="exo_styled_controls_repeat_all">@drawable/exo_icon_repeat_all</drawable>
+    <drawable name="exo_styled_controls_repeat_off">@drawable/exo_icon_repeat_off</drawable>
+    <drawable name="exo_styled_controls_repeat_one">@drawable/exo_icon_repeat_one</drawable>
+    <drawable name="exo_styled_controls_rewind">@drawable/exo_ic_rewind</drawable>
+    <drawable name="exo_styled_controls_settings">@drawable/exo_ic_settings</drawable>
+    <drawable name="exo_styled_controls_shuffle_off">@drawable/exo_icon_shuffle_off</drawable>
+    <drawable name="exo_styled_controls_shuffle_on">@drawable/exo_icon_shuffle_on</drawable>
+    <drawable name="exo_styled_controls_simple_fastforward">@drawable/exo_icon_fastforward</drawable>
+    <drawable name="exo_styled_controls_simple_rewind">@drawable/exo_icon_rewind</drawable>
+    <drawable name="exo_styled_controls_speed">@drawable/exo_ic_speed</drawable>
+    <drawable name="exo_styled_controls_subtitle_off">@drawable/exo_ic_subtitle_off</drawable>
+    <drawable name="exo_styled_controls_subtitle_on">@drawable/exo_ic_subtitle_on</drawable>
+    <drawable name="exo_styled_controls_vr">@drawable/exo_icon_vr</drawable>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
     <item name="lb_browse_header_unselect_alpha" type="fraction">50%</item>
@@ -546,6 +763,49 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="exo_ad_overlay" type="id"/>
+    <item name="exo_artwork" type="id"/>
+    <item name="exo_audio_track" type="id"/>
+    <item name="exo_basic_controls" type="id"/>
+    <item name="exo_bottom_bar" type="id"/>
+    <item name="exo_buffering" type="id"/>
+    <item name="exo_center_controls" type="id"/>
+    <item name="exo_content_frame" type="id"/>
+    <item name="exo_controller" type="id"/>
+    <item name="exo_controller_placeholder" type="id"/>
+    <item name="exo_controls_background" type="id"/>
+    <item name="exo_duration" type="id"/>
+    <item name="exo_error_message" type="id"/>
+    <item name="exo_extra_controls" type="id"/>
+    <item name="exo_extra_controls_scroll_view" type="id"/>
+    <item name="exo_ffwd" type="id"/>
+    <item name="exo_ffwd_with_amount" type="id"/>
+    <item name="exo_fullscreen" type="id"/>
+    <item name="exo_image" type="id"/>
+    <item name="exo_minimal_controls" type="id"/>
+    <item name="exo_minimal_fullscreen" type="id"/>
+    <item name="exo_next" type="id"/>
+    <item name="exo_overflow_hide" type="id"/>
+    <item name="exo_overflow_show" type="id"/>
+    <item name="exo_overlay" type="id"/>
+    <item name="exo_pause" type="id"/>
+    <item name="exo_play" type="id"/>
+    <item name="exo_play_pause" type="id"/>
+    <item name="exo_playback_speed" type="id"/>
+    <item name="exo_position" type="id"/>
+    <item name="exo_prev" type="id"/>
+    <item name="exo_progress" type="id"/>
+    <item name="exo_progress_placeholder" type="id"/>
+    <item name="exo_repeat_toggle" type="id"/>
+    <item name="exo_rew" type="id"/>
+    <item name="exo_rew_with_amount" type="id"/>
+    <item name="exo_settings" type="id"/>
+    <item name="exo_shuffle" type="id"/>
+    <item name="exo_shutter" type="id"/>
+    <item name="exo_subtitle" type="id"/>
+    <item name="exo_subtitles" type="id"/>
+    <item name="exo_time" type="id"/>
+    <item name="exo_vr" type="id"/>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="glide_custom_view_target_tag" type="id"/>
     <item name="home" type="id"/>
@@ -571,6 +831,7 @@
     <item name="lb_slide_transition_value" type="id"/>
     <item name="line1" type="id"/>
     <item name="line3" type="id"/>
+    <item name="media_controller_compat_view_tag" type="id"/>
     <item name="pooling_container_listener_holder_tag" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
@@ -604,6 +865,8 @@
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="config_tooltipAnimTime">150</integer>
+    <integer name="exo_media_button_opacity_percentage_disabled">33</integer>
+    <integer name="exo_media_button_opacity_percentage_enabled">100</integer>
     <integer name="lb_browse_headers_transition_delay">150</integer>
     <integer name="lb_browse_headers_transition_duration">250</integer>
     <integer name="lb_browse_rows_anim_duration">250</integer>
@@ -640,6 +903,14 @@
     <integer name="slideEdgeEnd">5</integer>
     <integer name="slideEdgeStart">3</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Fast forward <ns1:g example="1" id="fastforward_amount">%d</ns1:g> second</item>
+    <item quantity="other">Fast forward <ns1:g example="30" id="fastforward_amount">%d</ns1:g> seconds</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Rewind <ns1:g example="1" id="rewind_amount">%d</ns1:g> second</item>
+    <item quantity="other">Rewind <ns1:g example="30" id="rewind_amount">%d</ns1:g> seconds</item>
+  </plurals>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
@@ -648,18 +919,6 @@
     <string name="abc_activitychooserview_choose_application">Choose an app</string>
     <string name="abc_capital_off">OFF</string>
     <string name="abc_capital_on">ON</string>
-    <string name="abc_font_family_body_1_material">sans-serif</string>
-    <string name="abc_font_family_body_2_material">sans-serif-medium</string>
-    <string name="abc_font_family_button_material">sans-serif-medium</string>
-    <string name="abc_font_family_caption_material">sans-serif</string>
-    <string name="abc_font_family_display_1_material">sans-serif</string>
-    <string name="abc_font_family_display_2_material">sans-serif</string>
-    <string name="abc_font_family_display_3_material">sans-serif</string>
-    <string name="abc_font_family_display_4_material">sans-serif-light</string>
-    <string name="abc_font_family_headline_material">sans-serif</string>
-    <string name="abc_font_family_menu_material">sans-serif</string>
-    <string name="abc_font_family_subhead_material">sans-serif</string>
-    <string name="abc_font_family_title_material">sans-serif-medium</string>
     <string name="abc_menu_alt_shortcut_label">Alt+</string>
     <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
     <string name="abc_menu_delete_shortcut_label">delete</string>
@@ -680,6 +939,60 @@
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
+    <string name="copy">Copy</string>
+    <string name="exo_controls_cc_disabled_description">Enable subtitles</string>
+    <string name="exo_controls_cc_enabled_description">Disable subtitles</string>
+    <string name="exo_controls_custom_playback_speed" translatable="false"><ns1:g example="1.05" id="playback_speed">%1$.2f</ns1:g>x</string>
+    <string name="exo_controls_fastforward_description">Fast forward</string>
+    <string name="exo_controls_fullscreen_enter_description">Enter fullscreen</string>
+    <string name="exo_controls_fullscreen_exit_description">Exit fullscreen</string>
+    <string name="exo_controls_hide">Hide player controls</string>
+    <string name="exo_controls_next_description">Next</string>
+    <string name="exo_controls_overflow_hide_description">Hide additional settings</string>
+    <string name="exo_controls_overflow_show_description">Show additional settings</string>
+    <string name="exo_controls_pause_description">Pause</string>
+    <string name="exo_controls_play_description">Play</string>
+    <string name="exo_controls_playback_speed">Speed</string>
+    <string name="exo_controls_previous_description">Previous</string>
+    <string name="exo_controls_repeat_all_description">Current mode: Repeat all. Toggle repeat mode.</string>
+    <string name="exo_controls_repeat_off_description">Current mode: Repeat none. Toggle repeat mode.</string>
+    <string name="exo_controls_repeat_one_description">Current mode: Repeat one. Toggle repeat mode.</string>
+    <string name="exo_controls_rewind_description">Rewind</string>
+    <string name="exo_controls_seek_bar_description">Playback progress</string>
+    <string name="exo_controls_settings_description">Settings</string>
+    <string name="exo_controls_show">Show player controls</string>
+    <string name="exo_controls_shuffle_off_description">Enable shuffle mode</string>
+    <string name="exo_controls_shuffle_on_description">Disable shuffle mode</string>
+    <string name="exo_controls_stop_description">Stop</string>
+    <string name="exo_controls_time_placeholder" translatable="false">00:00:00</string>
+    <string name="exo_controls_vr_description">VR mode</string>
+    <string name="exo_download_completed">Download completed</string>
+    <string name="exo_download_description">Download</string>
+    <string name="exo_download_downloading">Downloading</string>
+    <string name="exo_download_failed">Download failed</string>
+    <string name="exo_download_notification_channel_name">Downloads</string>
+    <string name="exo_download_paused">Downloads paused</string>
+    <string name="exo_download_paused_for_network">Downloads waiting for network</string>
+    <string name="exo_download_paused_for_wifi">Downloads waiting for WiFi</string>
+    <string name="exo_download_removing">Removing downloads</string>
+    <string name="exo_item_list"><ns1:g example="apple, pear" id="list">%1$s</ns1:g>, <ns1:g example="banana" id="item">%2$s</ns1:g></string>
+    <string name="exo_track_bitrate"><ns1:g example="5.2" id="bitrate">%1$.2f</ns1:g> Mbps</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution"><ns1:g example="1024" id="width">%1$d</ns1:g> × <ns1:g example="768" id="height">%2$d</ns1:g></string>
+    <string name="exo_track_role_alternate">Alternate</string>
+    <string name="exo_track_role_closed_captions">CC</string>
+    <string name="exo_track_role_commentary">Commentary</string>
+    <string name="exo_track_role_supplementary">Supplementary</string>
+    <string name="exo_track_selection_auto">Auto</string>
+    <string name="exo_track_selection_none">None</string>
+    <string name="exo_track_selection_title_audio">Audio</string>
+    <string name="exo_track_stereo">Stereo</string>
+    <string name="exo_track_surround">Surround sound</string>
+    <string name="exo_track_surround_5_point_1">5.1 surround sound</string>
+    <string name="exo_track_surround_7_point_1">7.1 surround sound</string>
+    <string name="exo_track_unknown">Unknown</string>
+    <string name="exo_track_unknown_name">Unknown (<ns1:g example="Frengligian" id="name">%1$s</ns1:g>)</string>
+    <string name="expand_button_title">Advanced</string>
     <string name="lb_control_display_fast_forward_multiplier">%1$dX</string>
     <string name="lb_control_display_rewind_multiplier">%1$dX</string>
     <string name="lb_guidedaction_continue_title">Continue</string>
@@ -718,9 +1031,16 @@
     <string name="lb_search_bar_hint_speech">Speak to search</string>
     <string name="lb_search_bar_hint_with_title">Search <ns1:g id="search context">%1$s</ns1:g></string>
     <string name="lb_search_bar_hint_with_title_speech">Speak to search <ns1:g id="search context">%1$s</ns1:g></string>
+    <string name="not_set">Not set</string>
     <string name="orb_search_action">Search Action</string>
+    <string name="preference_copied">
+        \"<ns1:g example="Version 1.1" id="summary">%1$s</ns1:g>\" copied to clipboard.
+    </string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="summary_collapsed_preference_list"><ns1:g id="current_items">%1$s</ns1:g>, <ns1:g id="added_items">%2$s</ns1:g></string>
+    <string name="v7_preference_off">OFF</string>
+    <string name="v7_preference_on">ON</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -1113,11 +1433,13 @@
         <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSecondary">@style/TextAppearance.AppCompat.Body1</item>
-        <item name="listPreferredItemHeight">64dp</item>
-        <item name="listPreferredItemHeightSmall">48dp</item>
-        <item name="listPreferredItemHeightLarge">80dp</item>
+        <item name="listPreferredItemHeight">@dimen/abc_list_item_height_material</item>
+        <item name="listPreferredItemHeightSmall">@dimen/abc_list_item_height_small_material</item>
+        <item name="listPreferredItemHeightLarge">@dimen/abc_list_item_height_large_material</item>
         <item name="listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
         <item name="listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="listPreferredItemPaddingStart">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="listPreferredItemPaddingEnd">@dimen/abc_list_item_padding_horizontal_material</item>
 
         
         <item name="spinnerStyle">@style/Widget.AppCompat.Spinner</item>
@@ -1155,6 +1477,7 @@
         <item name="editTextBackground">@drawable/abc_edit_text_material</item>
         <item name="editTextColor">?android:attr/textColorPrimary</item>
         <item name="autoCompleteTextViewStyle">@style/Widget.AppCompat.AutoCompleteTextView</item>
+        <item name="android:textViewStyle">@style/Widget.AppCompat.TextView</item>
 
         
         <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
@@ -1307,11 +1630,13 @@
         <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSecondary">@style/TextAppearance.AppCompat.Body1</item>
-        <item name="listPreferredItemHeight">64dp</item>
-        <item name="listPreferredItemHeightSmall">48dp</item>
-        <item name="listPreferredItemHeightLarge">80dp</item>
+        <item name="listPreferredItemHeight">@dimen/abc_list_item_height_material</item>
+        <item name="listPreferredItemHeightSmall">@dimen/abc_list_item_height_small_material</item>
+        <item name="listPreferredItemHeightLarge">@dimen/abc_list_item_height_large_material</item>
         <item name="listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
         <item name="listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="listPreferredItemPaddingStart">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="listPreferredItemPaddingEnd">@dimen/abc_list_item_padding_horizontal_material</item>
 
         
         <item name="spinnerStyle">@style/Widget.AppCompat.Spinner</item>
@@ -1349,6 +1674,7 @@
         <item name="editTextBackground">@drawable/abc_edit_text_material</item>
         <item name="editTextColor">?android:attr/textColorPrimary</item>
         <item name="autoCompleteTextViewStyle">@style/Widget.AppCompat.AutoCompleteTextView</item>
+        <item name="android:textViewStyle">@style/Widget.AppCompat.TextView</item>
 
         
         <item name="colorPrimaryDark">@color/primary_dark_material_light</item>
@@ -1614,10 +1940,12 @@
     <style name="Base.Widget.AppCompat.ButtonBar.AlertDialog"/>
     <style name="Base.Widget.AppCompat.CompoundButton.CheckBox" parent="android:Widget.CompoundButton.CheckBox">
         <item name="android:button">?android:attr/listChoiceIndicatorMultiple</item>
+        <item name="buttonCompat">?attr/listChoiceIndicatorMultipleAnimated</item>
         <item name="android:background">?attr/controlBackground</item>
     </style>
     <style name="Base.Widget.AppCompat.CompoundButton.RadioButton" parent="android:Widget.CompoundButton.RadioButton">
         <item name="android:button">?android:attr/listChoiceIndicatorSingle</item>
+        <item name="buttonCompat">?attr/listChoiceIndicatorSingleAnimated</item>
         <item name="android:background">?attr/controlBackground</item>
     </style>
     <style name="Base.Widget.AppCompat.CompoundButton.Switch" parent="android:Widget.CompoundButton">
@@ -1773,6 +2101,7 @@
     <style name="Base.Widget.AppCompat.Spinner.Underlined">
         <item name="android:background">@drawable/abc_spinner_textfield_background_material</item>
     </style>
+    <style name="Base.Widget.AppCompat.TextView" parent="android:Widget.TextView"/>
     <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="android:Widget.TextView.SpinnerItem">
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem</item>
         <item name="android:paddingLeft">8dp</item>
@@ -1783,6 +2112,235 @@
         <item name="android:background">?attr/controlBackground</item>
         <item name="android:minWidth">56dp</item>
         <item name="android:scaleType">center</item>
+    </style>
+    <style name="ExoMediaButton">
+    <item name="android:background">?android:attr/selectableItemBackground</item>
+    <item name="android:layout_width">@dimen/exo_media_button_width</item>
+    <item name="android:layout_height">@dimen/exo_media_button_height</item>
+  </style>
+    <style name="ExoMediaButton.FastForward">
+    <item name="android:src">@drawable/exo_legacy_controls_fastforward</item>
+    <item name="android:contentDescription">@string/exo_controls_fastforward_description</item>
+  </style>
+    <style name="ExoMediaButton.Next">
+    <item name="android:src">@drawable/exo_legacy_controls_next</item>
+    <item name="android:contentDescription">@string/exo_controls_next_description</item>
+  </style>
+    <style name="ExoMediaButton.Pause">
+    <item name="android:src">@drawable/exo_legacy_controls_pause</item>
+    <item name="android:contentDescription">@string/exo_controls_pause_description</item>
+  </style>
+    <style name="ExoMediaButton.Play">
+    <item name="android:src">@drawable/exo_legacy_controls_play</item>
+    <item name="android:contentDescription">@string/exo_controls_play_description</item>
+  </style>
+    <style name="ExoMediaButton.Previous">
+    <item name="android:src">@drawable/exo_legacy_controls_previous</item>
+    <item name="android:contentDescription">@string/exo_controls_previous_description</item>
+  </style>
+    <style name="ExoMediaButton.Rewind">
+    <item name="android:src">@drawable/exo_legacy_controls_rewind</item>
+    <item name="android:contentDescription">@string/exo_controls_rewind_description</item>
+  </style>
+    <style name="ExoMediaButton.VR">
+    <item name="android:src">@drawable/exo_legacy_controls_vr</item>
+    <item name="android:contentDescription">@string/exo_controls_vr_description</item>
+  </style>
+    <style name="ExoStyledControls"/>
+    <style name="ExoStyledControls.Button">
+    <item name="android:background">?android:attr/selectableItemBackground</item>
+    <item name="android:scaleType">fitXY</item>
+    <item name="android:layout_marginLeft">@dimen/exo_icon_horizontal_margin</item>
+    <item name="android:layout_marginRight">@dimen/exo_icon_horizontal_margin</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom">
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:layout_width">@dimen/exo_small_icon_width</item>
+    <item name="android:layout_height">@dimen/exo_small_icon_height</item>
+    <item name="android:layout_marginLeft">@dimen/exo_small_icon_horizontal_margin</item>
+    <item name="android:layout_marginRight">@dimen/exo_small_icon_horizontal_margin</item>
+    <item name="android:paddingLeft">@dimen/exo_small_icon_padding_horizontal</item>
+    <item name="android:paddingRight">@dimen/exo_small_icon_padding_horizontal</item>
+    <item name="android:paddingTop">@dimen/exo_small_icon_padding_vertical</item>
+    <item name="android:paddingBottom">@dimen/exo_small_icon_padding_vertical</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom.AudioTrack">
+    <item name="android:src">@drawable/exo_styled_controls_audiotrack</item>
+    <item name="android:contentDescription">@string/exo_track_selection_title_audio</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom.CC">
+    <item name="android:src">@drawable/exo_styled_controls_subtitle_off</item>
+    <item name="android:contentDescription">@string/exo_controls_cc_disabled_description</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom.FullScreen">
+    <item name="android:src">@drawable/exo_styled_controls_fullscreen_enter</item>
+    <item name="android:contentDescription">@string/exo_controls_fullscreen_enter_description</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom.OverflowHide">
+    <item name="android:src">@drawable/exo_styled_controls_overflow_hide</item>
+    <item name="android:contentDescription">@string/exo_controls_overflow_hide_description</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom.OverflowShow">
+    <item name="android:src">@drawable/exo_styled_controls_overflow_show</item>
+    <item name="android:contentDescription">@string/exo_controls_overflow_show_description</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom.PlaybackSpeed">
+    <item name="android:src">@drawable/exo_styled_controls_speed</item>
+    <item name="android:contentDescription">@string/exo_controls_playback_speed</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom.RepeatToggle">
+    <item name="android:src">@drawable/exo_styled_controls_repeat_off</item>
+    <item name="android:contentDescription">@string/exo_controls_repeat_off_description</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom.Settings">
+    <item name="android:src">@drawable/exo_styled_controls_settings</item>
+    <item name="android:contentDescription">@string/exo_controls_settings_description</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom.Shuffle">
+    <item name="android:src">@drawable/exo_styled_controls_shuffle_off</item>
+    <item name="android:contentDescription">@string/exo_controls_shuffle_off_description</item>
+  </style>
+    <style name="ExoStyledControls.Button.Bottom.VR">
+    <item name="android:src">@drawable/exo_styled_controls_vr</item>
+    <item name="android:contentDescription">@string/exo_controls_vr_description</item>
+  </style>
+    <style name="ExoStyledControls.Button.Center">
+    <item name="android:layout_width">@dimen/exo_icon_size</item>
+    <item name="android:layout_height">@dimen/exo_icon_size</item>
+  </style>
+    <style name="ExoStyledControls.Button.Center.FfwdWithAmount">
+    <item name="android:foreground">@drawable/exo_styled_controls_fastforward</item>
+    <item name="android:gravity">center|bottom</item>
+    <item name="android:paddingRight">0dp</item>
+    <item name="android:paddingLeft">0dp</item>
+    <item name="android:paddingBottom">@dimen/exo_icon_padding_bottom</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">@dimen/exo_icon_text_size</item>
+    <item name="android:textColor">@color/exo_white</item>
+    
+    <item name="backgroundTint">@color/exo_white</item>
+    <item name="android:insetBottom">0dp</item>
+  </style>
+    <style name="ExoStyledControls.Button.Center.Next">
+    <item name="android:src">@drawable/exo_styled_controls_next</item>
+    <item name="android:contentDescription">@string/exo_controls_next_description</item>
+    <item name="android:padding">@dimen/exo_icon_padding</item>
+  </style>
+    <style name="ExoStyledControls.Button.Center.PlayPause">
+    <item name="android:src">@drawable/exo_styled_controls_play</item>
+    <item name="android:contentDescription">@string/exo_controls_play_description</item>
+    <item name="android:padding">@dimen/exo_icon_padding</item>
+  </style>
+    <style name="ExoStyledControls.Button.Center.Previous">
+    <item name="android:src">@drawable/exo_styled_controls_previous</item>
+    <item name="android:contentDescription">@string/exo_controls_previous_description</item>
+    <item name="android:padding">@dimen/exo_icon_padding</item>
+  </style>
+    <style name="ExoStyledControls.Button.Center.RewWithAmount">
+    <item name="android:foreground">@drawable/exo_styled_controls_rewind</item>
+    <item name="android:gravity">center|bottom</item>
+    <item name="android:paddingRight">0dp</item>
+    <item name="android:paddingLeft">0dp</item>
+    <item name="android:paddingBottom">@dimen/exo_icon_padding_bottom</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">@dimen/exo_icon_text_size</item>
+    <item name="android:textColor">@color/exo_white</item>
+    
+    <item name="backgroundTint">@color/exo_white</item>
+    <item name="android:insetBottom">0dp</item>
+  </style>
+    <style name="ExoStyledControls.TimeBar">
+    <item name="bar_height">@dimen/exo_styled_progress_bar_height</item>
+    <item name="bar_gravity">bottom</item>
+    <item name="touch_target_height">@dimen/exo_styled_progress_touch_target_height</item>
+    <item name="scrubber_enabled_size">@dimen/exo_styled_progress_enabled_thumb_size</item>
+    <item name="scrubber_dragged_size">@dimen/exo_styled_progress_dragged_thumb_size</item>
+    <item name="android:layout_height">@dimen/exo_styled_progress_layout_height</item>
+  </style>
+    <style name="ExoStyledControls.TimeText">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_gravity">center_vertical</item>
+    <item name="android:paddingLeft">4dp</item>
+    <item name="android:paddingRight">4dp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:gravity">center</item>
+  </style>
+    <style name="ExoStyledControls.TimeText.Duration">
+    <item name="android:textColor">@color/exo_white_opacity_70</item>
+    <item name="android:text">@string/exo_controls_time_placeholder</item>
+  </style>
+    <style name="ExoStyledControls.TimeText.Position">
+    <item name="android:textColor">@color/exo_white</item>
+    <item name="android:text">@string/exo_controls_time_placeholder</item>
+  </style>
+    <style name="ExoStyledControls.TimeText.Separator">
+    <item name="android:textColor">@color/exo_white_opacity_70</item>
+    <item name="android:text">·</item>
+  </style>
+    <style name="LeanbackPreference">
+        <item name="android:layout">@layout/leanback_preference</item>
+    </style>
+    <style name="LeanbackPreference.Category">
+        <item name="android:layout">@layout/leanback_preference_category</item>
+        
+        <item name="android:shouldDisableView">false</item>
+        <item name="android:selectable">false</item>
+    </style>
+    <style name="LeanbackPreference.CheckBoxPreference">
+        <item name="android:layout">@layout/leanback_preference</item>
+        <item name="android:widgetLayout">@layout/leanback_preference_widget_checkbox</item>
+    </style>
+    <style name="LeanbackPreference.DialogPreference">
+        <item name="android:positiveButtonText">@android:string/ok</item>
+        <item name="android:negativeButtonText">@android:string/cancel</item>
+    </style>
+    <style name="LeanbackPreference.DialogPreference.EditTextPreference">
+        <item name="android:dialogLayout">@layout/preference_dialog_edittext</item>
+    </style>
+    <style name="LeanbackPreference.EditText" parent="android:Widget.Material.EditText">
+        <item name="android:layout_marginStart">?android:attr/listPreferredItemPaddingStart</item>
+        <item name="android:layout_marginEnd">?android:attr/listPreferredItemPaddingEnd</item>
+    </style>
+    <style name="LeanbackPreference.Information">
+        <item name="android:layout">@layout/leanback_preference_information</item>
+        <item name="android:enabled">false</item>
+        <item name="android:shouldDisableView">false</item>
+    </style>
+    <style name="LeanbackPreference.PreferenceScreen">
+    </style>
+    <style name="LeanbackPreference.SeekBarPreference">
+        <item name="android:layout">@layout/leanback_preference_widget_seekbar</item>
+        <item name="adjustable">true</item>
+        <item name="showSeekBarValue">true</item>
+    </style>
+    <style name="LeanbackPreference.SubTitle">
+        <item name="android:textAppearance">?android:attr/subtitleTextAppearance</item>
+        <item name="android:paddingStart">?android:attr/listPreferredItemPaddingStart</item>
+        <item name="android:paddingEnd">?android:attr/listPreferredItemPaddingEnd</item>
+        <item name="android:paddingTop">@dimen/lb_preference_item_text_space_top</item>
+        <item name="android:paddingBottom">@dimen/lb_preference_item_text_space_bottom</item>
+        <item name="android:maxLines">4</item>
+    </style>
+    <style name="LeanbackPreference.SwitchPreference">
+        <item name="android:widgetLayout">@layout/leanback_preference_widget_switch</item>
+        <item name="android:switchTextOn">@string/v7_preference_on</item>
+        <item name="android:switchTextOff">@string/v7_preference_off</item>
+    </style>
+    <style name="LeanbackPreference.SwitchPreferenceCompat">
+        <item name="android:widgetLayout">@layout/leanback_preference_widget_switch_compat</item>
+        <item name="android:switchTextOn">@string/v7_preference_on</item>
+        <item name="android:switchTextOff">@string/v7_preference_off</item>
+    </style>
+    <style name="LeanbackPreference.Title">
+        <item name="android:minHeight">@dimen/lb_preference_decor_title_text_height</item>
+        <item name="android:layout_marginTop">@dimen/lb_preference_decor_title_margin_top</item>
+        <item name="android:layout_marginStart">?android:attr/listPreferredItemPaddingStart</item>
+        <item name="android:layout_marginEnd">?android:attr/listPreferredItemPaddingEnd</item>
+        <item name="android:textAppearance">?android:attr/titleTextAppearance</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme.Holo">
         <item name="android:windowNoTitle">true</item>
@@ -1828,10 +2386,21 @@
         <item name="android:textAppearanceSmallInverse">@style/TextAppearance.AppCompat.Small.Inverse</item>
 
         <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
+        <item name="listChoiceIndicatorSingleAnimated">@drawable/abc_btn_radio_material_anim</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
+        <item name="listChoiceIndicatorMultipleAnimated">@drawable/abc_btn_check_material_anim</item>
 
+        
+        <item name="android:textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
+        
+        <item name="android:listPreferredItemHeight">@dimen/abc_list_item_height_material</item>
+        <item name="android:listPreferredItemHeightSmall">@dimen/abc_list_item_height_small_material</item>
+        <item name="android:listPreferredItemHeightLarge">@dimen/abc_list_item_height_large_material</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
         <item name="android:listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/abc_list_item_padding_horizontal_material</item>
 
         <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>
         <item name="android:actionModeCopyDrawable">?actionModeCopyDrawable</item>
@@ -1887,10 +2456,21 @@
         <item name="android:textAppearanceSmallInverse">@style/TextAppearance.AppCompat.Small.Inverse</item>
 
         <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
+        <item name="listChoiceIndicatorSingleAnimated">@drawable/abc_btn_radio_material_anim</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
+        <item name="listChoiceIndicatorMultipleAnimated">@drawable/abc_btn_check_material_anim</item>
 
+        
+        <item name="android:textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
+        
+        <item name="android:listPreferredItemHeight">@dimen/abc_list_item_height_material</item>
+        <item name="android:listPreferredItemHeightSmall">@dimen/abc_list_item_height_small_material</item>
+        <item name="android:listPreferredItemHeightLarge">@dimen/abc_list_item_height_large_material</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
         <item name="android:listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/abc_list_item_padding_horizontal_material</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/abc_list_item_padding_horizontal_material</item>
 
         <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>
         <item name="android:actionModeCopyDrawable">?actionModeCopyDrawable</item>
@@ -1922,6 +2502,254 @@
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
     </style>
     <style name="Platform.Widget.AppCompat.Spinner" parent="android:Widget.Holo.Spinner"/>
+    <style name="Preference">
+        <item name="android:layout">@layout/preference</item>
+    </style>
+    <style name="Preference.Category">
+        <item name="android:layout">@layout/preference_category</item>
+        
+        <item name="android:shouldDisableView">false</item>
+        <item name="android:selectable">false</item>
+    </style>
+    <style name="Preference.Category.Material">
+        <item name="android:layout">@layout/preference_category_material</item>
+        <item name="allowDividerAbove">true</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
+    </style>
+    <style name="Preference.CheckBoxPreference">
+        <item name="android:widgetLayout">@layout/preference_widget_checkbox</item>
+    </style>
+    <style name="Preference.CheckBoxPreference.Material">
+        <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
+    </style>
+    <style name="Preference.DialogPreference">
+        <item name="android:positiveButtonText">@android:string/ok</item>
+        <item name="android:negativeButtonText">@android:string/cancel</item>
+    </style>
+    <style name="Preference.DialogPreference.EditTextPreference">
+        <item name="android:dialogLayout">@layout/preference_dialog_edittext</item>
+    </style>
+    <style name="Preference.DialogPreference.EditTextPreference.Material">
+        <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="singleLineTitle">false</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
+    </style>
+    <style name="Preference.DialogPreference.Material">
+        <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
+    </style>
+    <style name="Preference.DropDown">
+        <item name="android:layout">@layout/preference_dropdown</item>
+    </style>
+    <style name="Preference.DropDown.Material">
+        <item name="android:layout">@layout/preference_dropdown_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
+    </style>
+    <style name="Preference.Information">
+        <item name="android:layout">@layout/preference_information</item>
+        <item name="android:enabled">false</item>
+        <item name="android:shouldDisableView">false</item>
+    </style>
+    <style name="Preference.Information.Material">
+        <item name="android:layout">@layout/preference_information_material</item>
+        <item name="android:enabled">false</item>
+        <item name="android:shouldDisableView">false</item>
+    </style>
+    <style name="Preference.Material">
+        <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="singleLineTitle">false</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
+    </style>
+    <style name="Preference.PreferenceScreen">
+    </style>
+    <style name="Preference.PreferenceScreen.Material">
+        <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
+    </style>
+    <style name="Preference.SeekBarPreference">
+        <item name="android:layout">@layout/preference_widget_seekbar</item>
+        <item name="adjustable">true</item>
+        <item name="showSeekBarValue">true</item>
+        <item name="updatesContinuously">false</item>
+    </style>
+    <style name="Preference.SeekBarPreference.Material">
+        <item name="android:layout">@layout/preference_widget_seekbar_material</item>
+        <item name="adjustable">true</item>
+        <item name="showSeekBarValue">false</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
+    </style>
+    <style name="Preference.SwitchPreference">
+        <item name="android:widgetLayout">@layout/preference_widget_switch</item>
+        <item name="android:switchTextOn">@string/v7_preference_on</item>
+        <item name="android:switchTextOff">@string/v7_preference_off</item>
+    </style>
+    <style name="Preference.SwitchPreference.Material">
+        <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="singleLineTitle">false</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
+    </style>
+    <style name="Preference.SwitchPreferenceCompat">
+        <item name="android:widgetLayout">@layout/preference_widget_switch_compat</item>
+        <item name="android:switchTextOn">@string/v7_preference_on</item>
+        <item name="android:switchTextOff">@string/v7_preference_off</item>
+    </style>
+    <style name="Preference.SwitchPreferenceCompat.Material">
+        <item name="android:layout">@layout/preference_material</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">true</item>
+        <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
+    </style>
+    <style name="PreferenceCategoryTitleTextStyle">
+        <item name="android:textAppearance">?attr/preferenceCategoryTitleTextAppearance</item>
+        <item name="android:textColor">@color/preference_fallback_accent_color</item>
+    </style>
+    <style name="PreferenceFragment">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:divider">?android:attr/listDivider</item>
+    </style>
+    <style name="PreferenceFragment.Leanback">
+        <item name="android:divider">@null</item>
+    </style>
+    <style name="PreferenceFragment.Material">
+        <item name="android:divider">@drawable/preference_list_divider_material</item>
+        <item name="allowDividerAfterLastItem">false</item>
+    </style>
+    <style name="PreferenceFragmentList">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+    <style name="PreferenceFragmentList.Leanback">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingBottom">34dp</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+    <style name="PreferenceFragmentList.Material">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="PreferenceSummaryTextStyle">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+    <style name="PreferenceThemeOverlay">
+        <item name="android:scrollbars">vertical</item>
+        <item name="checkBoxPreferenceStyle">@style/Preference.CheckBoxPreference.Material</item>
+        <item name="dialogPreferenceStyle">@style/Preference.DialogPreference.Material</item>
+        <item name="dropdownPreferenceStyle">@style/Preference.DropDown.Material</item>
+        <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.EditTextPreference.Material</item>
+        <item name="preferenceCategoryStyle">@style/Preference.Category.Material</item>
+        <item name="preferenceFragmentCompatStyle">@style/PreferenceFragment.Material</item>
+        <item name="preferenceFragmentListStyle">@style/PreferenceFragmentList.Material</item>
+        <item name="preferenceFragmentStyle">@style/PreferenceFragment.Material</item>
+        <item name="preferenceScreenStyle">@style/Preference.PreferenceScreen.Material</item>
+        <item name="preferenceStyle">@style/Preference.Material</item>
+        <item name="seekBarPreferenceStyle">@style/Preference.SeekBarPreference.Material</item>
+        <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat.Material</item>
+        <item name="switchPreferenceStyle">@style/Preference.SwitchPreference.Material</item>
+        <item name="preferenceCategoryTitleTextAppearance">@style/TextAppearance.AppCompat.Body2</item>
+    </style>
+    <style name="PreferenceThemeOverlay.v14"/>
+    <style name="PreferenceThemeOverlay.v14.Leanback" parent="PreferenceThemeOverlayLeanback"/>
+    <style name="PreferenceThemeOverlay.v14.Material"/>
+    <style name="PreferenceThemeOverlayLeanback" parent="PreferenceThemeOverlayLeanbackBase">
+        <item name="checkBoxPreferenceStyle">@style/LeanbackPreference.CheckBoxPreference</item>
+        <item name="dialogPreferenceStyle">@style/LeanbackPreference.DialogPreference</item>
+        <item name="dropdownPreferenceStyle">@style/Preference.DropDown</item>
+        <item name="editTextPreferenceStyle">@style/LeanbackPreference.DialogPreference.EditTextPreference</item>
+        <item name="preferenceCategoryStyle">@style/LeanbackPreference.Category</item>
+        <item name="preferenceFragmentCompatStyle">@style/PreferenceFragment.Leanback</item>
+        <item name="preferenceFragmentListStyle">@style/PreferenceFragmentList.Leanback</item>
+        <item name="preferenceFragmentStyle">@style/PreferenceFragment.Leanback</item>
+        <item name="preferenceInformationStyle">@style/LeanbackPreference.Information</item>
+        <item name="preferenceScreenStyle">@style/LeanbackPreference.PreferenceScreen</item>
+        <item name="preferenceStyle">@style/LeanbackPreference</item>
+        <item name="seekBarPreferenceStyle">@style/LeanbackPreference.SeekBarPreference</item>
+        <item name="switchPreferenceCompatStyle">@style/LeanbackPreference.SwitchPreferenceCompat</item>
+        <item name="switchPreferenceStyle">@style/LeanbackPreference.SwitchPreference</item>
+    </style>
+    <style name="PreferenceThemeOverlayLeanbackBase">
+        
+        <item name="android:windowBackground">@color/default_preference_window_background_legacy</item>
+
+        
+
+        
+        <item name="android:colorPrimary">@color/default_preference_brand_color_legacy</item>
+
+        
+        <item name="android:titleTextAppearance">@style/TextAppearance.LeanbackPreference.Title</item>
+
+        
+        <item name="android:subtitleTextAppearance">@style/TextAppearance.LeanbackPreference.SubTitle</item>
+
+        
+        <item name="android:textAppearanceListItem">@style/TextAppearance.LeanbackPreference.ListItem</item>
+
+        
+        <item name="android:textAppearanceListItemSecondary">@style/TextAppearance.LeanbackPreference.ListItem.Secondary</item>
+
+        
+        <item name="android:textAppearanceListItemSmall">@style/TextAppearance.LeanbackPreference.Category</item>
+
+        
+        <item name="android:listPreferredItemPaddingStart">@dimen/lb_preference_item_padding_start</item>
+
+        
+        <item name="android:listPreferredItemPaddingEnd">@dimen/lb_preference_item_padding_end</item>
+
+        
+        <item name="android:textColorPrimary">@color/lb_preference_item_primary_text_color</item>
+
+        
+        <item name="android:textColorSecondary">@color/lb_preference_item_secondary_text_color</item>
+
+        
+        <item name="android:textColorTertiary">?android:attr/colorAccent</item>
+
+        
+        <item name="android:titleTextStyle">@style/LeanbackPreference.Title</item>
+
+        
+        <item name="android:subtitleTextStyle">@style/LeanbackPreference.SubTitle</item>
+
+        
+        <item name="android:editTextStyle">@style/LeanbackPreference.EditText</item>
+
+        
+        <item name="android:colorControlNormal">@color/lb_preference_item_primary_text_color_default</item>
+
+        
+        <item name="android:colorControlActivated">?android:attr/colorAccent</item>
+
+        
+        <item name="android:imageButtonStyle">@null</item>
+
+    </style>
     <style name="RtlOverlay.DialogWindowTitle.AppCompat" parent="Base.DialogWindowTitle.AppCompat">
     </style>
     <style name="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem" parent="android:Widget">
@@ -2147,6 +2975,43 @@
         <item name="android:textColor">@color/lb_browse_title_color</item>
     </style>
     <style name="TextAppearance.LeanbackBase" parent="android:TextAppearance.Holo">
+    </style>
+    <style name="TextAppearance.LeanbackPreference.Category" parent="android:TextAppearance">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">?android:attr/textColorTertiary</item>
+        <item name="android:textSize">@dimen/lb_preference_category_text_size</item>
+    </style>
+    <style name="TextAppearance.LeanbackPreference.ListItem" parent="android:TextAppearance">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">@dimen/lb_preference_item_primary_text_size</item>
+    </style>
+    <style name="TextAppearance.LeanbackPreference.ListItem.Secondary" parent="android:TextAppearance">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">@dimen/lb_preference_item_secondary_text_size</item>
+    </style>
+    <style name="TextAppearance.LeanbackPreference.SubTitle" parent="android:TextAppearance">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">@dimen/lb_preference_item_primary_text_size</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.LeanbackPreference.SubTitle.V23" parent="android:TextAppearance">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">@dimen/lb_preference_item_primary_text_size</item>
+        <item name="android:textColor">?android:attr/subtitleTextColor</item>
+    </style>
+    <style name="TextAppearance.LeanbackPreference.Title" parent="android:TextAppearance">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/lb_preference_decor_title_text_size</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.LeanbackPreference.Title.V23" parent="android:TextAppearance">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/lb_preference_decor_title_text_size</item>
+        <item name="android:textColor">?android:attr/titleTextColor</item>
     </style>
     <style name="TextAppearance.Widget.AppCompat.ExpandedMenu.Item" parent="Base.TextAppearance.Widget.AppCompat.ExpandedMenu.Item">
     </style>
@@ -2533,6 +3398,11 @@
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="ThemeOverlay.AppCompat.DayNight" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="ThemeOverlay.AppCompat.DayNight.ActionBar">
+        <item name="colorControlNormal">?android:attr/textColorPrimary</item>
+        <item name="searchViewStyle">@style/Widget.AppCompat.SearchView.ActionBar</item>
+    </style>
     <style name="ThemeOverlay.AppCompat.Dialog" parent="Base.ThemeOverlay.AppCompat.Dialog"/>
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="Base.ThemeOverlay.AppCompat.Dialog.Alert"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
@@ -2627,6 +3497,7 @@
     <style name="Widget.AppCompat.Spinner.DropDown"/>
     <style name="Widget.AppCompat.Spinner.DropDown.ActionBar"/>
     <style name="Widget.AppCompat.Spinner.Underlined" parent="Base.Widget.AppCompat.Spinner.Underlined"/>
+    <style name="Widget.AppCompat.TextView" parent="Base.Widget.AppCompat.TextView"/>
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
@@ -3403,6 +4274,8 @@
     <declare-styleable name="AppCompatTextView">
         
         <attr format="reference|boolean" name="textAllCaps"/>
+        
+        <attr format="string" name="textLocale"/>
         <attr name="android:textAppearance"/>
         
         <attr format="enum" name="autoSizeTextType">
@@ -3428,6 +4301,37 @@
         <attr format="dimension" name="firstBaselineToTopHeight"/>
         
         <attr format="dimension" name="lastBaselineToBottomHeight"/>
+        
+        <attr format="string" name="fontVariationSettings"/>
+        
+        <attr format="reference" name="drawableLeftCompat"/>
+        <attr format="reference" name="drawableTopCompat"/>
+        <attr format="reference" name="drawableRightCompat"/>
+        <attr format="reference" name="drawableBottomCompat"/>
+        <attr format="reference" name="drawableStartCompat"/>
+        <attr format="reference" name="drawableEndCompat"/>
+        
+        <attr format="color" name="drawableTint"/>
+        
+        <attr name="drawableTintMode">
+            <!-- The tint is drawn on top of the drawable.
+                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            <enum name="src_over" value="3"/>
+            <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
+                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            <enum name="src_in" value="5"/>
+            <!-- The tint is drawn above the drawable, but with the drawable’s alpha
+                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            <enum name="src_atop" value="9"/>
+            <!-- Multiplies the color and alpha channels of the drawable with those of
+                 the tint. [Sa * Da, Sc * Dc] -->
+            <enum name="multiply" value="14"/>
+            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            <enum name="screen" value="15"/>
+            <!-- Combines the tint and drawable color and alpha channels, clamping the
+                 result to valid color values. Saturate(S + D) -->
+            <enum name="add" value="16"/>
+        </attr>
     </declare-styleable>
     <declare-styleable name="AppCompatTheme">
 
@@ -3641,6 +4545,11 @@
         <attr format="dimension" name="listPreferredItemPaddingRight"/>
 
         
+        <attr format="dimension" name="listPreferredItemPaddingStart"/>
+        
+        <attr format="dimension" name="listPreferredItemPaddingEnd"/>
+
+        
         <attr format="reference" name="dropDownListViewStyle"/>
         <attr format="reference" name="listPopupWindowStyle"/>
 
@@ -3771,6 +4680,25 @@
         <attr format="reference|color" name="colorError"/>
 
         <attr format="string" name="viewInflaterClass"/>
+
+        
+        
+        
+        <eat-comment/>
+
+        
+        <attr format="reference" name="listChoiceIndicatorMultipleAnimated"/>
+        
+        <attr format="reference" name="listChoiceIndicatorSingleAnimated"/>
+
+    </declare-styleable>
+    <declare-styleable name="AspectRatioFrameLayout">
+    <attr name="resize_mode"/>
+  </declare-styleable>
+    <declare-styleable name="BackgroundStyle">
+        <attr name="android:selectableItemBackground"/>
+        
+        <attr name="selectableItemBackground"/>
     </declare-styleable>
     <declare-styleable name="ButtonBarLayout">
         
@@ -3781,6 +4709,17 @@
         <attr format="reference" name="queryPatterns"/>
         
         <attr format="boolean" name="shortcutMatchRequired"/>
+    </declare-styleable>
+    <declare-styleable name="CheckBoxPreference">
+        
+        <attr format="string" name="summaryOn"/>
+        <attr name="android:summaryOn"/>
+        
+        <attr format="string" name="summaryOff"/>
+        <attr name="android:summaryOff"/>
+        
+        <attr format="boolean" name="disableDependentsState"/>
+        <attr name="android:disableDependentsState"/>
     </declare-styleable>
     <declare-styleable name="ColorStateListItem">
         
@@ -3794,6 +4733,8 @@
     </declare-styleable>
     <declare-styleable name="CompoundButton">
         <attr name="android:button"/>
+        
+        <attr format="reference" name="buttonCompat"/>
         
         <attr format="color" name="buttonTint"/>
 
@@ -3818,6 +4759,42 @@
             <enum name="add" value="16"/>
         </attr>
     </declare-styleable>
+    <declare-styleable name="DefaultTimeBar">
+    <attr name="bar_height"/>
+    <attr name="bar_gravity"/>
+    <attr name="touch_target_height"/>
+    <attr name="ad_marker_width"/>
+    <attr name="scrubber_enabled_size"/>
+    <attr name="scrubber_disabled_size"/>
+    <attr name="scrubber_dragged_size"/>
+    <attr name="scrubber_drawable"/>
+    <attr name="played_color"/>
+    <attr name="scrubber_color"/>
+    <attr name="buffered_color"/>
+    <attr name="unplayed_color"/>
+    <attr name="ad_marker_color"/>
+    <attr name="played_ad_marker_color"/>
+  </declare-styleable>
+    <declare-styleable name="DialogPreference">
+        
+        <attr format="string" name="dialogTitle"/>
+        <attr name="android:dialogTitle"/>
+        
+        <attr format="string" name="dialogMessage"/>
+        <attr name="android:dialogMessage"/>
+        
+        <attr format="reference" name="dialogIcon"/>
+        <attr name="android:dialogIcon"/>
+        
+        <attr format="string" name="positiveButtonText"/>
+        <attr name="android:positiveButtonText"/>
+        
+        <attr format="string" name="negativeButtonText"/>
+        <attr name="android:negativeButtonText"/>
+        
+        <attr format="reference" name="dialogLayout"/>
+        <attr name="android:dialogLayout"/>
+    </declare-styleable>
     <declare-styleable name="DrawerArrowToggle">
         
         <attr format="color" name="color"/>
@@ -3835,6 +4812,10 @@
         <attr format="dimension" name="barLength"/>
         
         <attr format="dimension" name="thickness"/>
+    </declare-styleable>
+    <declare-styleable name="EditTextPreference">
+        
+        <attr format="boolean" name="useSimpleSummaryProvider"/>
     </declare-styleable>
     <declare-styleable name="FontFamily">
         
@@ -4222,6 +5203,32 @@
         <attr format="reference" name="timePickerStyle"/>
         <attr format="reference" name="pinPickerStyle"/>
     </declare-styleable>
+    <declare-styleable name="LegacyPlayerControlView">
+    <attr name="show_timeout"/>
+    <attr name="repeat_toggle_modes"/>
+    <attr name="show_rewind_button"/>
+    <attr name="show_fastforward_button"/>
+    <attr name="show_previous_button"/>
+    <attr name="show_next_button"/>
+    <attr name="show_shuffle_button"/>
+    <attr name="time_bar_min_update_interval"/>
+    <attr name="controller_layout_id"/>
+    
+    <attr name="bar_height"/>
+    <attr name="bar_gravity"/>
+    <attr name="touch_target_height"/>
+    <attr name="ad_marker_width"/>
+    <attr name="scrubber_enabled_size"/>
+    <attr name="scrubber_disabled_size"/>
+    <attr name="scrubber_dragged_size"/>
+    <attr name="scrubber_drawable"/>
+    <attr name="played_color"/>
+    <attr name="scrubber_color"/>
+    <attr name="buffered_color"/>
+    <attr name="unplayed_color"/>
+    <attr name="ad_marker_color"/>
+    <attr name="played_ad_marker_color"/>
+  </declare-styleable>
     <declare-styleable name="LinearLayoutCompat">
         
         <attr name="android:orientation"/>
@@ -4257,6 +5264,16 @@
         <attr name="android:dropDownVerticalOffset"/>
         
         <attr name="android:dropDownHorizontalOffset"/>
+    </declare-styleable>
+    <declare-styleable name="ListPreference">
+        
+        <attr format="reference" name="entries"/>
+        <attr name="android:entries"/>
+        
+        <attr format="reference" name="entryValues"/>
+        <attr name="android:entryValues"/>
+        
+        <attr name="useSimpleSummaryProvider"/>
     </declare-styleable>
     <declare-styleable name="MenuGroup">
 
@@ -4423,6 +5440,14 @@
         
         <attr format="reference" name="subMenuArrow"/>
     </declare-styleable>
+    <declare-styleable name="MultiSelectListPreference">
+        
+        <attr name="entries"/>
+        <attr name="android:entries"/>
+        
+        <attr name="entryValues"/>
+        <attr name="android:entryValues"/>
+    </declare-styleable>
     <declare-styleable name="PagingIndicator">
         
         <attr format="reference" name="lbDotRadius"/>
@@ -4439,6 +5464,108 @@
         
         <attr format="reference" name="arrowBgColor"/>
     </declare-styleable>
+    <declare-styleable name="PlayerControlView">
+    <attr name="show_timeout"/>
+    <attr name="repeat_toggle_modes"/>
+    <attr name="repeat_off_icon"/>
+    <attr name="repeat_one_icon"/>
+    <attr name="repeat_all_icon"/>
+    <attr name="show_rewind_button"/>
+    <attr name="rewind_icon"/>
+    <attr name="show_fastforward_button"/>
+    <attr name="fastforward_icon"/>
+    <attr name="show_previous_button"/>
+    <attr name="previous_icon"/>
+    <attr name="show_next_button"/>
+    <attr name="next_icon"/>
+    <attr name="show_shuffle_button"/>
+    <attr name="shuffle_on_icon"/>
+    <attr name="shuffle_off_icon"/>
+    <attr name="show_subtitle_button"/>
+    <attr name="subtitle_on_icon"/>
+    <attr name="subtitle_off_icon"/>
+    <attr name="show_vr_button"/>
+    <attr name="vr_icon"/>
+    <attr name="time_bar_min_update_interval"/>
+    <attr name="controller_layout_id"/>
+    <attr name="animation_enabled"/>
+    <attr name="play_icon"/>
+    <attr name="pause_icon"/>
+    <attr name="fullscreen_exit_icon"/>
+    <attr name="fullscreen_enter_icon"/>
+    
+    <attr name="bar_height"/>
+    <attr name="bar_gravity"/>
+    <attr name="touch_target_height"/>
+    <attr name="ad_marker_width"/>
+    <attr name="scrubber_enabled_size"/>
+    <attr name="scrubber_disabled_size"/>
+    <attr name="scrubber_dragged_size"/>
+    <attr name="scrubber_drawable"/>
+    <attr name="played_color"/>
+    <attr name="scrubber_color"/>
+    <attr name="buffered_color"/>
+    <attr name="unplayed_color"/>
+    <attr name="ad_marker_color"/>
+    <attr name="played_ad_marker_color"/>
+  </declare-styleable>
+    <declare-styleable name="PlayerView">
+    <attr name="use_artwork"/>
+    <attr name="artwork_display_mode"/>
+    <attr name="image_display_mode"/>
+    <attr name="shutter_background_color"/>
+    <attr name="default_artwork"/>
+    <attr name="use_controller"/>
+    <attr name="hide_on_touch"/>
+    <attr name="hide_during_ads"/>
+    <attr name="auto_show"/>
+    <attr name="show_buffering"/>
+    <attr name="keep_content_on_player_reset"/>
+    <attr name="player_layout_id"/>
+    <attr name="surface_type"/>
+    
+    <attr name="resize_mode"/>
+    
+    <attr name="show_timeout"/>
+    <attr name="repeat_toggle_modes"/>
+    <attr name="repeat_off_icon"/>
+    <attr name="repeat_one_icon"/>
+    <attr name="repeat_all_icon"/>
+    <attr name="show_shuffle_button"/>
+    <attr name="shuffle_off_icon"/>
+    <attr name="shuffle_on_icon"/>
+    <attr name="show_subtitle_button"/>
+    <attr name="subtitle_off_icon"/>
+    <attr name="subtitle_on_icon"/>
+    <attr name="show_vr_button"/>
+    <attr name="vr_icon"/>
+    <attr name="time_bar_min_update_interval"/>
+    <attr name="controller_layout_id"/>
+    <attr name="animation_enabled"/>
+    <attr name="play_icon"/>
+    <attr name="pause_icon"/>
+    <attr name="fullscreen_enter_icon"/>
+    <attr name="fullscreen_exit_icon"/>
+    <attr name="next_icon"/>
+    <attr name="previous_icon"/>
+    <attr name="fastforward_icon"/>
+    <attr name="rewind_icon"/>
+    
+    <attr name="bar_height"/>
+    <attr name="bar_gravity"/>
+    <attr name="touch_target_height"/>
+    <attr name="ad_marker_width"/>
+    <attr name="scrubber_enabled_size"/>
+    <attr name="scrubber_disabled_size"/>
+    <attr name="scrubber_dragged_size"/>
+    <attr name="scrubber_drawable"/>
+    <attr name="played_color"/>
+    <attr name="scrubber_color"/>
+    <attr name="buffered_color"/>
+    <attr name="unplayed_color"/>
+    <attr name="ad_marker_color"/>
+    <attr name="played_ad_marker_color"/>
+  </declare-styleable>
     <declare-styleable name="PopupWindow">
         
         <attr format="boolean" name="overlapAnchor"/>
@@ -4448,6 +5575,145 @@
     <declare-styleable name="PopupWindowBackgroundState">
         
         <attr format="boolean" name="state_above_anchor"/>
+    </declare-styleable>
+    <declare-styleable name="Preference">
+        
+        <attr name="icon"/>
+        <attr name="android:icon"/>
+        
+        <attr format="string" name="key"/>
+        <attr name="android:key"/>
+        
+        <attr name="title"/>
+        <attr name="android:title"/>
+        
+        <attr format="string" name="summary"/>
+        <attr name="android:summary"/>
+        
+        <attr format="integer" name="order"/>
+        <attr name="android:order"/>
+        
+        <attr format="string" name="fragment"/>
+        <attr name="android:fragment"/>
+        
+        <attr name="layout"/>
+        <attr name="android:layout"/>
+        
+        <attr format="reference" name="widgetLayout"/>
+        <attr name="android:widgetLayout"/>
+        
+        <attr format="boolean" name="enabled"/>
+        <attr name="android:enabled"/>
+        
+        <attr format="boolean" name="selectable"/>
+        <attr name="android:selectable"/>
+        
+        <attr format="string" name="dependency"/>
+        <attr name="android:dependency"/>
+        
+        <attr format="boolean" name="persistent"/>
+        <attr name="android:persistent"/>
+        
+        <attr format="string|boolean|integer|reference|float" name="defaultValue"/>
+        <attr name="android:defaultValue"/>
+        
+        <attr format="boolean" name="shouldDisableView"/>
+        <attr name="android:shouldDisableView"/>
+
+        
+        <attr format="boolean" name="allowDividerAbove"/>
+
+        
+        <attr format="boolean" name="allowDividerBelow"/>
+
+        
+        <attr format="boolean" name="singleLineTitle"/>
+        <attr name="android:singleLineTitle"/>
+
+        
+        <attr format="boolean" name="iconSpaceReserved"/>
+        <attr name="android:iconSpaceReserved"/>
+
+        
+        <attr format="boolean" name="isPreferenceVisible"/>
+
+        
+        <attr format="boolean" name="enableCopying"/>
+    </declare-styleable>
+    <declare-styleable name="PreferenceFragment">
+        
+        <attr name="android:layout"/>
+        
+        <attr name="android:divider"/>
+        
+        <attr name="android:dividerHeight"/>
+        
+        <attr name="allowDividerAfterLastItem"/>
+    </declare-styleable>
+    <declare-styleable name="PreferenceFragmentCompat">
+        
+        <attr name="android:layout"/>
+        
+        <attr name="android:divider"/>
+        
+        <attr name="android:dividerHeight"/>
+        
+        <attr format="boolean" name="allowDividerAfterLastItem"/>
+    </declare-styleable>
+    <declare-styleable name="PreferenceGroup">
+        
+        <attr format="boolean" name="orderingFromXml"/>
+        <attr name="android:orderingFromXml"/>
+        
+        <attr format="integer" name="initialExpandedChildrenCount"/>
+    </declare-styleable>
+    <declare-styleable name="PreferenceImageView">
+        <attr format="dimension" name="maxWidth"/>
+        <attr name="android:maxWidth"/>
+        <attr format="dimension" name="maxHeight"/>
+        <attr name="android:maxHeight"/>
+    </declare-styleable>
+    <declare-styleable name="PreferenceTheme">
+
+        
+        
+        
+        <eat-comment/>
+
+        
+        <attr format="reference" name="preferenceTheme"/>
+
+        
+        <attr format="reference" name="preferenceCategoryTitleTextAppearance"/>
+
+        
+        <attr format="reference" name="preferenceScreenStyle"/>
+        
+        <attr format="reference" name="preferenceFragmentStyle"/>
+        
+        <attr format="reference" name="preferenceFragmentCompatStyle"/>
+        
+        <attr format="reference" name="preferenceCategoryStyle"/>
+        
+        <attr format="reference" name="preferenceStyle"/>
+        
+        <attr format="reference" name="preferenceInformationStyle"/>
+        
+        <attr format="reference" name="checkBoxPreferenceStyle"/>
+        
+        <attr format="reference" name="dialogPreferenceStyle"/>
+        
+        <attr format="reference" name="editTextPreferenceStyle"/>
+        
+        <attr format="reference" name="dropdownPreferenceStyle"/>
+        
+        <attr format="reference" name="preferenceFragmentListStyle"/>
+        
+        <attr format="reference" name="switchPreferenceStyle"/>
+        
+        <attr format="reference" name="switchPreferenceCompatStyle"/>
+        
+        <attr format="reference" name="seekBarPreferenceStyle"/>
     </declare-styleable>
     <declare-styleable name="RecycleListView">
         
@@ -4510,6 +5776,19 @@
         
         <attr format="reference" name="submitBackground"/>
         <attr name="android:focusable"/>
+    </declare-styleable>
+    <declare-styleable name="SeekBarPreference">
+        <attr format="integer" name="min"/>
+        <attr name="android:max"/>
+        <attr name="android:layout"/>
+        
+        <attr format="integer" name="seekBarIncrement"/>
+        
+        <attr format="boolean" name="adjustable"/>
+        
+        <attr format="boolean" name="showSeekBarValue"/>
+        
+        <attr format="boolean" name="updatesContinuously"/>
     </declare-styleable>
     <declare-styleable name="Spinner">
         
@@ -4609,20 +5888,59 @@
         
         <attr format="boolean" name="showText"/>
     </declare-styleable>
+    <declare-styleable name="SwitchPreference">
+        
+        <attr name="summaryOn"/>
+        <attr name="android:summaryOn"/>
+        
+        <attr name="summaryOff"/>
+        <attr name="android:summaryOff"/>
+        
+        <attr name="switchTextOn"/>
+        <attr name="android:switchTextOn"/>
+        
+        <attr name="switchTextOff"/>
+        <attr name="android:switchTextOff"/>
+        
+        <attr name="disableDependentsState"/>
+        <attr name="android:disableDependentsState"/>
+    </declare-styleable>
+    <declare-styleable name="SwitchPreferenceCompat">
+        
+        <attr name="summaryOn"/>
+        <attr name="android:summaryOn"/>
+        
+        <attr name="summaryOff"/>
+        <attr name="android:summaryOff"/>
+        
+        <attr format="string" name="switchTextOn"/>
+        <attr name="android:switchTextOn"/>
+        
+        <attr format="string" name="switchTextOff"/>
+        <attr name="android:switchTextOff"/>
+        
+        <attr name="disableDependentsState"/>
+        <attr name="android:disableDependentsState"/>
+    </declare-styleable>
     <declare-styleable name="TextAppearance">
         <attr name="android:textSize"/>
         <attr name="android:textColor"/>
         <attr name="android:textColorHint"/>
         <attr name="android:textColorLink"/>
         <attr name="android:textStyle"/>
+        <attr name="android:textFontWeight"/>
         <attr name="android:typeface"/>
         <attr name="android:fontFamily"/>
         <attr name="fontFamily"/>
         <attr name="textAllCaps"/>
+        
+        <attr name="textLocale"/>
         <attr name="android:shadowColor"/>
         <attr name="android:shadowDy"/>
         <attr name="android:shadowDx"/>
         <attr name="android:shadowRadius"/>
+        
+        <attr name="fontVariationSettings"/>
     </declare-styleable>
     <declare-styleable name="Toolbar">
         <attr format="reference" name="titleTextAppearance"/>
@@ -4650,6 +5968,8 @@
         <attr name="contentInsetEndWithActions"/>
         <attr format="dimension" name="maxButtonHeight"/>
         <attr name="buttonGravity">
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10"/>
             <!-- Push object to the top of its container, not changing its size. -->
             <flag name="top" value="0x30"/>
             <!-- Push object to the bottom of its container, not changing its size. -->
@@ -4674,6 +5994,8 @@
         
         <attr format="color" name="subtitleTextColor"/>
         <attr name="android:minHeight"/>
+        
+        <attr format="reference" name="menu"/>
     </declare-styleable>
     <declare-styleable name="View">
         

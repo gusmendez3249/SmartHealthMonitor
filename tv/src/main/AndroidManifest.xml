@@ -5,6 +5,9 @@
     <!-- No requiere pantalla táctil -->
     <uses-feature android:name="android.hardware.touchscreen"
         android:required="false" />
+        
+    <!-- Permiso para que ExoPlayer pueda descargar el audio de internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
  
     <application
         android:theme="@style/Theme.SmartHealthTV"
