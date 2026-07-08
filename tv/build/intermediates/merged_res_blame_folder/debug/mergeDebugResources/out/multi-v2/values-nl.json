@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-24:/values-nl/values-nl.xml",
+            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-28:/values-nl/values-nl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\f74424edc44cd28d2e795727b9404be4\\transformed\\leanback-1.2.0\\res\\values-nl\\values-nl.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\bd25197de61fe16e4f241d11ad368f5c\\transformed\\core-1.7.0\\res\\values-nl\\values-nl.xml",
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\03b91450248b24297fdebf549b38ecbf\\transformed\\core-1.9.0\\res\\values-nl\\values-nl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

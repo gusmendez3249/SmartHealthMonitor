@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-24:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-28:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\bd25197de61fe16e4f241d11ad368f5c\\transformed\\core-1.7.0\\res\\values-fr-rCA\\values-fr-rCA.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "69",
-                        "startColumns": "4",
-                        "startOffsets": "7534",
-                        "endColumns": "100",
-                        "endOffsets": "7630"
-                    }
-                },
                 {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\dcc56bc811624a6d308538c34ece522f\\transformed\\appcompat-1.0.0\\res\\values-fr-rCA\\values-fr-rCA.xml",
                     "from": {
@@ -52,6 +35,23 @@
                         "startOffsets": "2879,2986,3087,3185,3281,3404,3519,3618,3712,3844,3972,4077,4202,4381,4517,4649,4756,4846,4982,5071,5181,5290,5398,5499,5618,5744,5871,5994,6111,6237,6372,6513,6635,6763,6850,6938,7046,7190,7352",
                         "endColumns": "106,100,97,95,122,114,98,93,131,127,104,124,178,135,131,106,89,135,88,109,108,107,100,118,125,126,122,116,125,134,140,121,127,86,87,107,143,161,95",
                         "endOffsets": "2981,3082,3180,3276,3399,3514,3613,3707,3839,3967,4072,4197,4376,4512,4644,4751,4841,4977,5066,5176,5285,5393,5494,5613,5739,5866,5989,6106,6232,6367,6508,6630,6758,6845,6933,7041,7185,7347,7443"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\03b91450248b24297fdebf549b38ecbf\\transformed\\core-1.9.0\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "69",
+                        "startColumns": "4",
+                        "startOffsets": "7534",
+                        "endColumns": "100",
+                        "endOffsets": "7630"
                     }
                 }
             ]

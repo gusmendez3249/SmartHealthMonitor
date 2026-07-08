@@ -1,10 +1,10 @@
 [
     {
-        "merged": "mx.utng.smarthealthmonitor.tv-debug-26:/drawable_banner_tv.png.flat",
-        "source": "mx.utng.smarthealthmonitor.tv-main-28:/drawable/banner_tv.png"
+        "merged": "mx.utng.smarthealthmonitor.tv-debug-30:/drawable_banner_tv.png.flat",
+        "source": "mx.utng.smarthealthmonitor.tv-main-32:/drawable/banner_tv.png"
     },
     {
-        "merged": "mx.utng.smarthealthmonitor.tv-debug-26:/layout_activity_main.xml.flat",
-        "source": "mx.utng.smarthealthmonitor.tv-main-28:/layout/activity_main.xml"
+        "merged": "mx.utng.smarthealthmonitor.tv-debug-30:/layout_activity_main.xml.flat",
+        "source": "mx.utng.smarthealthmonitor.tv-main-32:/layout/activity_main.xml"
     }
 ]

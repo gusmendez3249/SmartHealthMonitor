@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-24:/values-bs/values-bs.xml",
+            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-28:/values-bs/values-bs.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\03b91450248b24297fdebf549b38ecbf\\transformed\\core-1.9.0\\res\\values-bs\\values-bs.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "69",
+                        "startColumns": "4",
+                        "startOffsets": "7300",
+                        "endColumns": "100",
+                        "endOffsets": "7396"
+                    }
+                },
                 {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\f74424edc44cd28d2e795727b9404be4\\transformed\\leanback-1.2.0\\res\\values-bs\\values-bs.xml",
                     "from": {
@@ -35,23 +52,6 @@
                         "startOffsets": "105,224,333,440,526,630,752,834,915,1006,1099,1195,1289,1390,1483,1578,1677,1768,1859,1945,2048,2153,2251,2356,2469,2572,2745,7216",
                         "endColumns": "118,108,106,85,103,121,81,80,90,92,95,93,100,92,94,98,90,90,85,102,104,97,104,112,102,172,96,83",
                         "endOffsets": "219,328,435,521,625,747,829,910,1001,1094,1190,1284,1385,1478,1573,1672,1763,1854,1940,2043,2148,2246,2351,2464,2567,2740,2837,7295"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\bd25197de61fe16e4f241d11ad368f5c\\transformed\\core-1.7.0\\res\\values-bs\\values-bs.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "69",
-                        "startColumns": "4",
-                        "startOffsets": "7300",
-                        "endColumns": "100",
-                        "endOffsets": "7396"
                     }
                 }
             ]

@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-24:/values-hu/values-hu.xml",
+            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-28:/values-hu/values-hu.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\03b91450248b24297fdebf549b38ecbf\\transformed\\core-1.9.0\\res\\values-hu\\values-hu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "69",
+                        "startColumns": "4",
+                        "startOffsets": "7439",
+                        "endColumns": "100",
+                        "endOffsets": "7535"
+                    }
+                },
                 {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\f74424edc44cd28d2e795727b9404be4\\transformed\\leanback-1.2.0\\res\\values-hu\\values-hu.xml",
                     "from": {
@@ -18,23 +35,6 @@
                         "startOffsets": "2878,2985,3086,3181,3278,3395,3507,3605,3703,3828,3956,4066,4188,4347,4479,4614,4724,4815,4939,5033,5140,5246,5349,5449,5566,5678,5807,5939,6048,6158,6285,6420,6541,6670,6757,6842,6958,7099,7263",
                         "endColumns": "106,100,94,96,116,111,97,97,124,127,109,121,158,131,134,109,90,123,93,106,105,102,99,116,111,128,131,108,109,126,134,120,128,86,84,115,140,163,92",
                         "endOffsets": "2980,3081,3176,3273,3390,3502,3600,3698,3823,3951,4061,4183,4342,4474,4609,4719,4810,4934,5028,5135,5241,5344,5444,5561,5673,5802,5934,6043,6153,6280,6415,6536,6665,6752,6837,6953,7094,7258,7351"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\bd25197de61fe16e4f241d11ad368f5c\\transformed\\core-1.7.0\\res\\values-hu\\values-hu.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "69",
-                        "startColumns": "4",
-                        "startOffsets": "7439",
-                        "endColumns": "100",
-                        "endOffsets": "7535"
                     }
                 },
                 {

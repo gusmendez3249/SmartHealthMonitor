@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-24:/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-28:/values-en-rAU/values-en-rAU.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\03b91450248b24297fdebf549b38ecbf\\transformed\\core-1.9.0\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "69",
+                        "startColumns": "4",
+                        "startOffsets": "7065",
+                        "endColumns": "100",
+                        "endOffsets": "7161"
+                    }
+                },
                 {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\dcc56bc811624a6d308538c34ece522f\\transformed\\appcompat-1.0.0\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
@@ -35,23 +52,6 @@
                         "startOffsets": "2764,2871,2972,3069,3163,3282,3394,3490,3586,3717,3846,3950,4072,4201,4322,4441,4546,4636,4764,4853,4954,5057,5157,5250,5360,5466,5577,5686,5785,5892,6002,6118,6224,6336,6423,6507,6607,6742,6893",
                         "endColumns": "106,100,96,93,118,111,95,95,130,128,103,121,128,120,118,104,89,127,88,100,102,99,92,109,105,110,108,98,106,109,115,105,111,86,83,99,134,150,89",
                         "endOffsets": "2866,2967,3064,3158,3277,3389,3485,3581,3712,3841,3945,4067,4196,4317,4436,4541,4631,4759,4848,4949,5052,5152,5245,5355,5461,5572,5681,5780,5887,5997,6113,6219,6331,6418,6502,6602,6737,6888,6978"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\bd25197de61fe16e4f241d11ad368f5c\\transformed\\core-1.7.0\\res\\values-en-rAU\\values-en-rAU.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "69",
-                        "startColumns": "4",
-                        "startOffsets": "7065",
-                        "endColumns": "100",
-                        "endOffsets": "7161"
                     }
                 }
             ]

@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-24:/values-nb/values-nb.xml",
+            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-28:/values-nb/values-nb.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\bd25197de61fe16e4f241d11ad368f5c\\transformed\\core-1.7.0\\res\\values-nb\\values-nb.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "69",
-                        "startColumns": "4",
-                        "startOffsets": "7185",
-                        "endColumns": "100",
-                        "endOffsets": "7281"
-                    }
-                },
                 {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\f74424edc44cd28d2e795727b9404be4\\transformed\\leanback-1.2.0\\res\\values-nb\\values-nb.xml",
                     "from": {
@@ -35,6 +18,23 @@
                         "startOffsets": "2747,2854,2955,3052,3147,3265,3377,3474,3569,3709,3848,3953,4076,4227,4347,4466,4575,4673,4798,4891,4993,5101,5200,5299,5415,5523,5659,5794,5898,6008,6125,6241,6351,6460,6547,6628,6729,6863,7017",
                         "endColumns": "106,100,96,94,117,111,96,94,139,138,104,122,150,119,118,108,97,124,92,101,107,98,98,115,107,135,134,103,109,116,115,109,108,86,80,100,133,153,88",
                         "endOffsets": "2849,2950,3047,3142,3260,3372,3469,3564,3704,3843,3948,4071,4222,4342,4461,4570,4668,4793,4886,4988,5096,5195,5294,5410,5518,5654,5789,5893,6003,6120,6236,6346,6455,6542,6623,6724,6858,7012,7101"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\03b91450248b24297fdebf549b38ecbf\\transformed\\core-1.9.0\\res\\values-nb\\values-nb.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "69",
+                        "startColumns": "4",
+                        "startOffsets": "7185",
+                        "endColumns": "100",
+                        "endOffsets": "7281"
                     }
                 },
                 {

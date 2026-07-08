@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-24:/values-zh-rCN/values-zh-rCN.xml",
+            "outputFile": "mx.utng.smarthealthmonitor.tv-mergeDebugResources-28:/values-zh-rCN/values-zh-rCN.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\03b91450248b24297fdebf549b38ecbf\\transformed\\core-1.9.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "69",
+                        "startColumns": "4",
+                        "startOffsets": "6643",
+                        "endColumns": "100",
+                        "endOffsets": "6739"
+                    }
+                },
                 {
                     "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\dcc56bc811624a6d308538c34ece522f\\transformed\\appcompat-1.0.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
@@ -35,23 +52,6 @@
                         "startOffsets": "2666,2775,2878,2969,3059,3172,3273,3367,3456,3566,3675,3769,3882,3985,4093,4200,4297,4384,4490,4577,4674,4771,4867,4956,5063,5156,5258,5359,5454,5553,5649,5753,5849,5951,6038,6118,6211,6341,6484",
                         "endColumns": "108,102,90,89,112,100,93,88,109,108,93,112,102,107,106,96,86,105,86,96,96,95,88,106,92,101,100,94,98,95,103,95,101,86,79,92,129,142,80",
                         "endOffsets": "2770,2873,2964,3054,3167,3268,3362,3451,3561,3670,3764,3877,3980,4088,4195,4292,4379,4485,4572,4669,4766,4862,4951,5058,5151,5253,5354,5449,5548,5644,5748,5844,5946,6033,6113,6206,6336,6479,6560"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\gusta\\.gradle\\caches\\9.4.1\\transforms\\bd25197de61fe16e4f241d11ad368f5c\\transformed\\core-1.7.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "69",
-                        "startColumns": "4",
-                        "startOffsets": "6643",
-                        "endColumns": "100",
-                        "endOffsets": "6739"
                     }
                 }
             ]

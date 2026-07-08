@@ -6,10 +6,15 @@ MERGED from [androidx.leanback:leanback-grid:1.0.0] C:\Users\gusta\.gradle\cache
 MERGED from [androidx.leanback:leanback:1.2.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\f74424edc44cd28d2e795727b9404be4\transformed\leanback-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\b4ae79fb9852366e122bd116abd460b5\transformed\glide-4.16.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\dcc56bc811624a6d308538c34ece522f\transformed\appcompat-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\gusta\.gradle\caches\9.4.1\transforms\8ed18b20bf40746351647a961db100eb\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.2.4] C:\Users\gusta\.gradle\caches\9.4.1\transforms\940a3a0fd72d540b0e22ffdb4e5fbe1b\transformed\activity-1.2.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.8.3] C:\Users\gusta\.gradle\caches\9.4.1\transforms\4935c8ab9f9f1463cdd36c4a62b66e82\transformed\fragment-1.8.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment-ktx:1.8.3] C:\Users\gusta\.gradle\caches\9.4.1\transforms\2551a5f9134216fd6d6545079d1afc2c\transformed\fragment-ktx-1.8.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.8.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\387696ccc8e11e25215ab126211466ad\transformed\activity-1.8.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.8.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\3a12b27d5a096efa41d492b142085b3e\transformed\activity-ktx-1.8.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1596cbaaa78d523ffb039bd05fe21b0b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\3d50fcb8b6329037013e86a965455741\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\262574a21d5aaa1115b008deccd6f177\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\5aae76fcd82fdd01f790c3c02a805902\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\828def6195c1faa67f6f4e5fcefef16a\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media:media:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\ec18895db36cedaa29590f472ad0d2dd\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\gusta\.gradle\caches\9.4.1\transforms\d70067b4dd59d9b2a2ab8814d6ce64ba\transformed\recyclerview-1.3.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\473a67e4adc3395d039077441b68984c\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -17,16 +22,14 @@ MERGED from [androidx.customview:customview:1.0.0] C:\Users\gusta\.gradle\caches
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\5d59d5a0a6233032145a926940bb3a1b\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\6f8450e9c6fb1e6c4fbf43d7dd803781\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\742e73ffb2916a0debbfc64292d507b2\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.core:core-ktx:1.5.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1b4aaf3bac9e63f342558d0ecaece385\transformed\core-ktx-1.5.0\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.core:core:1.7.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\bd25197de61fe16e4f241d11ad368f5c\transformed\core-1.7.0\AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\5aae76fcd82fdd01f790c3c02a805902\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1dabc0acec4546ef9b024f6c5f5c7835\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\828def6195c1faa67f6f4e5fcefef16a\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\a423bf3cc33cafe91339b32753e306d4\transformed\core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\d291aa9c74b80b883448c47fe513086e\transformed\lifecycle-runtime-release\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\e9c6b7c1542206a0e144a2c807e82d12\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:2:1-5:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\aed24152e31a73b6354e70801f7c1697\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\65d911adf9bffdc0e1fa6bb5da900c28\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\5de3ca43584792f49fcf6ae3f717015f\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\e9c6b7c1542206a0e144a2c807e82d12\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\aed24152e31a73b6354e70801f7c1697\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1dabc0acec4546ef9b024f6c5f5c7835\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\9f0171ad4c340f868edae4f1851e8fbe\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\34fccd36d69f9ed8e5bf3a9b3c14f541\transformed\lifecycle-viewmodel-ktx-2.8.7\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\60445c90ebedbe87f0c359c5071b3598\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -41,7 +44,7 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\40a0d94cfb677a791c712bdd3112bd31\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\9d15c6f99ce614d77649b23e10d10578\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\da1542d01d6af48a296a9a2326276ff0\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\45065fa40e8fc821582cbf4086627499\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\f36ecb419361683bef23c1174c0a838a\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
 	package
 		INJECTED from C:\Users\gusta\AndroidStudioProjects\SmartHealthMonitor\tv\src\main\AndroidManifest.xml
 	xmlns:android
@@ -61,8 +64,8 @@ ADDED from C:\Users\gusta\AndroidStudioProjects\SmartHealthMonitor\tv\src\main\A
 application
 ADDED from C:\Users\gusta\AndroidStudioProjects\SmartHealthMonitor\tv\src\main\AndroidManifest.xml:9:5-21:19
 INJECTED from C:\Users\gusta\AndroidStudioProjects\SmartHealthMonitor\tv\src\main\AndroidManifest.xml:9:5-21:19
-MERGED from [androidx.core:core:1.7.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\bd25197de61fe16e4f241d11ad368f5c\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.7.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\bd25197de61fe16e4f241d11ad368f5c\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\ab6b0a0b66ca76672435a92221d95a4e\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\ab6b0a0b66ca76672435a92221d95a4e\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\c17c91bf9a75a7a5bcd929bd6fd7e2bc\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
@@ -72,7 +75,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\gu
 	android:extractNativeLibs
 		INJECTED from C:\Users\gusta\AndroidStudioProjects\SmartHealthMonitor\tv\src\main\AndroidManifest.xml
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.7.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\bd25197de61fe16e4f241d11ad368f5c\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:banner
 		ADDED from C:\Users\gusta\AndroidStudioProjects\SmartHealthMonitor\tv\src\main\AndroidManifest.xml:11:9-45
 	android:theme
@@ -107,14 +110,24 @@ MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\gusta\.gradle\cach
 MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\b4ae79fb9852366e122bd116abd460b5\transformed\glide-4.16.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\dcc56bc811624a6d308538c34ece522f\transformed\appcompat-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\dcc56bc811624a6d308538c34ece522f\transformed\appcompat-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\gusta\.gradle\caches\9.4.1\transforms\8ed18b20bf40746351647a961db100eb\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\gusta\.gradle\caches\9.4.1\transforms\8ed18b20bf40746351647a961db100eb\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.2.4] C:\Users\gusta\.gradle\caches\9.4.1\transforms\940a3a0fd72d540b0e22ffdb4e5fbe1b\transformed\activity-1.2.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.2.4] C:\Users\gusta\.gradle\caches\9.4.1\transforms\940a3a0fd72d540b0e22ffdb4e5fbe1b\transformed\activity-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.8.3] C:\Users\gusta\.gradle\caches\9.4.1\transforms\4935c8ab9f9f1463cdd36c4a62b66e82\transformed\fragment-1.8.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.8.3] C:\Users\gusta\.gradle\caches\9.4.1\transforms\4935c8ab9f9f1463cdd36c4a62b66e82\transformed\fragment-1.8.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.8.3] C:\Users\gusta\.gradle\caches\9.4.1\transforms\2551a5f9134216fd6d6545079d1afc2c\transformed\fragment-ktx-1.8.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.8.3] C:\Users\gusta\.gradle\caches\9.4.1\transforms\2551a5f9134216fd6d6545079d1afc2c\transformed\fragment-ktx-1.8.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.8.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\387696ccc8e11e25215ab126211466ad\transformed\activity-1.8.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\387696ccc8e11e25215ab126211466ad\transformed\activity-1.8.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\3a12b27d5a096efa41d492b142085b3e\transformed\activity-ktx-1.8.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\3a12b27d5a096efa41d492b142085b3e\transformed\activity-ktx-1.8.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1596cbaaa78d523ffb039bd05fe21b0b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1596cbaaa78d523ffb039bd05fe21b0b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\3d50fcb8b6329037013e86a965455741\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\3d50fcb8b6329037013e86a965455741\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\262574a21d5aaa1115b008deccd6f177\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\262574a21d5aaa1115b008deccd6f177\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\5aae76fcd82fdd01f790c3c02a805902\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\5aae76fcd82fdd01f790c3c02a805902\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\828def6195c1faa67f6f4e5fcefef16a\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\828def6195c1faa67f6f4e5fcefef16a\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\ec18895db36cedaa29590f472ad0d2dd\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\ec18895db36cedaa29590f472ad0d2dd\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\gusta\.gradle\caches\9.4.1\transforms\d70067b4dd59d9b2a2ab8814d6ce64ba\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
@@ -129,26 +142,22 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\gusta\.gradl
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\6f8450e9c6fb1e6c4fbf43d7dd803781\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\742e73ffb2916a0debbfc64292d507b2\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
 MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\742e73ffb2916a0debbfc64292d507b2\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.core:core-ktx:1.5.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1b4aaf3bac9e63f342558d0ecaece385\transformed\core-ktx-1.5.0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.core:core-ktx:1.5.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1b4aaf3bac9e63f342558d0ecaece385\transformed\core-ktx-1.5.0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.core:core:1.7.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\bd25197de61fe16e4f241d11ad368f5c\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.7.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\bd25197de61fe16e4f241d11ad368f5c\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\5aae76fcd82fdd01f790c3c02a805902\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\5aae76fcd82fdd01f790c3c02a805902\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1dabc0acec4546ef9b024f6c5f5c7835\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1dabc0acec4546ef9b024f6c5f5c7835\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\828def6195c1faa67f6f4e5fcefef16a\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\828def6195c1faa67f6f4e5fcefef16a\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\a423bf3cc33cafe91339b32753e306d4\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\a423bf3cc33cafe91339b32753e306d4\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\d291aa9c74b80b883448c47fe513086e\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\d291aa9c74b80b883448c47fe513086e\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\e9c6b7c1542206a0e144a2c807e82d12\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:4:5-43
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\e9c6b7c1542206a0e144a2c807e82d12\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:4:5-43
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\aed24152e31a73b6354e70801f7c1697\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\aed24152e31a73b6354e70801f7c1697\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\65d911adf9bffdc0e1fa6bb5da900c28\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\65d911adf9bffdc0e1fa6bb5da900c28\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\5de3ca43584792f49fcf6ae3f717015f\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\5de3ca43584792f49fcf6ae3f717015f\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\e9c6b7c1542206a0e144a2c807e82d12\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\e9c6b7c1542206a0e144a2c807e82d12\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\aed24152e31a73b6354e70801f7c1697\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\aed24152e31a73b6354e70801f7c1697\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1dabc0acec4546ef9b024f6c5f5c7835\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\1dabc0acec4546ef9b024f6c5f5c7835\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\9f0171ad4c340f868edae4f1851e8fbe\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\9f0171ad4c340f868edae4f1851e8fbe\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7] C:\Users\gusta\.gradle\caches\9.4.1\transforms\34fccd36d69f9ed8e5bf3a9b3c14f541\transformed\lifecycle-viewmodel-ktx-2.8.7\AndroidManifest.xml:5:5-44
@@ -177,12 +186,32 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\gu
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\9d15c6f99ce614d77649b23e10d10578\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\da1542d01d6af48a296a9a2326276ff0\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\da1542d01d6af48a296a9a2326276ff0\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\45065fa40e8fc821582cbf4086627499\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\45065fa40e8fc821582cbf4086627499\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\f36ecb419361683bef23c1174c0a838a\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\f36ecb419361683bef23c1174c0a838a\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
 		INJECTED from C:\Users\gusta\AndroidStudioProjects\SmartHealthMonitor\tv\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\gusta\AndroidStudioProjects\SmartHealthMonitor\tv\src\main\AndroidManifest.xml
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+permission#mx.utng.smarthealthmonitor.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+uses-permission#mx.utng.smarthealthmonitor.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\gusta\.gradle\caches\9.4.1\transforms\03b91450248b24297fdebf549b38ecbf\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\ab6b0a0b66ca76672435a92221d95a4e\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\gusta\.gradle\caches\9.4.1\transforms\c17c91bf9a75a7a5bcd929bd6fd7e2bc\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
