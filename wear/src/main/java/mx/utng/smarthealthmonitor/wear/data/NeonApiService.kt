@@ -3,7 +3,6 @@ package mx.utng.smarthealthmonitor.wear.data
 import kotlinx.serialization.Serializable
 import retrofit2.http.*
 
-@Serializable
 data class NeonRequest(val query: String, val params: List<Any> = emptyList())
 
 @Serializable
