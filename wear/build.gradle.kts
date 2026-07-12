@@ -1,8 +1,17 @@
+import java.util.Properties
+
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(localPropertiesFile.inputStream())
+}
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     alias(libs.plugins.kotlin.compose)
     id("com.google.devtools.ksp")
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.22"
 }
 
 android {
@@ -15,10 +24,16 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
+        
+        buildConfigField("String", "MQTT_BROKER_URL", "\"${localProperties.getProperty("MQTT_BROKER_URL")}\"")
+        buildConfigField("int", "MQTT_PORT", "${localProperties.getProperty("MQTT_PORT")}")
+        buildConfigField("String", "MQTT_USERNAME", "\"${localProperties.getProperty("MQTT_USERNAME")}\"")
+        buildConfigField("String", "MQTT_PASSWORD", "\"${localProperties.getProperty("MQTT_PASSWORD")}\"")
     }
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     buildTypes {
@@ -68,4 +83,10 @@ dependencies {
 
     // Nota: No se puede depender directamente del módulo :app porque ambos son aplicaciones.
     // implementation(project(":app"))
+    
+    // Eclipse Paho MQTT para Android
+    implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
+    implementation("org.eclipse.paho:org.eclipse.paho.android.service:1.1.1")
+    // Kotlinx Serialization para JSON
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 }
