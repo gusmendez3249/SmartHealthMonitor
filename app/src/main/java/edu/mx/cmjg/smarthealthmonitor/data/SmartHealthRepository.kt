@@ -36,7 +36,8 @@ object SmartHealthRepository {
     suspend fun actualizarFC(bpm: Int) {
         _fcFlow.value = bpm
         withContext(Dispatchers.IO) {
-            dao?.insertar(LecturaFC(valorBpm = bpm))
+            val estado = if (bpm in 60..100) "Normal" else if (bpm > 100) "FC Alta" else "FC Baja"
+            dao?.insertar(LecturaFC(bpm = bpm, estado = estado))
         }
     }
 
@@ -48,10 +49,10 @@ object SmartHealthRepository {
         dao?.obtenerUltimas() ?: emptyFlow()
 
     suspend fun limpiarHistorialAntiguo() {
-        val limite = System.currentTimeMillis() - (7L * 24 * 60 * 60 * 1000)
-        withContext(Dispatchers.IO) {
-            dao?.limpiarViejos(limite)
-        }
+        // val limite = System.currentTimeMillis() - (7L * 24 * 60 * 60 * 1000)
+        // withContext(Dispatchers.IO) {
+        //     dao?.limpiarViejos(limite)
+        // }
     }
 }
 
