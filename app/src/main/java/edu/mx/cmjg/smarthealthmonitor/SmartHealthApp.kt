@@ -11,7 +11,12 @@ class SmartHealthApp : Application() {
     lateinit var mqttService: MqttAppService
     override fun onCreate() {
         super.onCreate()
+        android.util.Log.d("SmartHealthApp", "Iniciando aplicación y base de datos...")
+        // Inicializar Room DB
         SmartHealthRepository.init(this)
+        
+        // Programar sync periódico con Neon
+        edu.mx.cmjg.smarthealthmonitor.data.sync.NeonSyncWorker.schedule(this)
         
         mqttService = MqttAppService(context = this)
         mqttService.connect()

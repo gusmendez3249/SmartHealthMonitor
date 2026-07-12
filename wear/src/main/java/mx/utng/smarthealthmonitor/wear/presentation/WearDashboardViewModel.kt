@@ -16,6 +16,7 @@ import mx.utng.smarthealthmonitor.wear.mqtt.MqttWearPublisher
 class WearDashboardViewModel(application: Application) : AndroidViewModel(application) {
     
     private val mqttPublisher = MqttWearPublisher(application)
+    private val neonRepo = mx.utng.smarthealthmonitor.wear.data.WearNeonRepository()
     
     init {
         mqttPublisher.connect()
@@ -25,6 +26,12 @@ class WearDashboardViewModel(application: Application) : AndroidViewModel(applic
                 val estado = when { bpm < 60 -> "FC Baja"; bpm > 100 -> "FC Alta"; else -> "Normal" }
                 android.util.Log.d("MQTT_WEAR", "Detectado latido en ViewModel: $bpm. Intentando publicar...")
                 mqttPublisher.publishFC(bpm, estado)
+                
+                // Publicar a Neon en IO thread
+                launch(kotlinx.coroutines.Dispatchers.IO) {
+                    kotlin.runCatching { neonRepo.publicarLectura(bpm, estado) }
+                        .onFailure { android.util.Log.w("WEAR","Sin red: ${it.message}") }
+                }
             }
         }
     }
