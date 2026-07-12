@@ -1,6 +1,7 @@
 package mx.utng.smarthealthmonitor.tv
  
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -8,26 +9,46 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import mx.utng.smarthealthmonitor.data.MockData
+import mx.utng.smarthealthmonitor.tv.mqtt.MqttTvSubscriber
+import mx.utng.smarthealthmonitor.tv.mqtt.TvMessage
  
-class TvViewModel : ViewModel() {
+class TvViewModel(application: Application) : AndroidViewModel(application) {
  
-    // Usamos MutableStateFlow simulando el repositorio, ya que el módulo TV
-    // no puede depender del módulo App directamente.
     private val _fc = MutableStateFlow(88)
     val fc: StateFlow<Int> = _fc.asStateFlow()
  
     private val _historial = MutableStateFlow(MockData.historialFC)
     val historial: StateFlow<List<LecturaFC>> = _historial.asStateFlow()
 
+    // Flow de mensajes MQTT entrantes
+    private val mqttFlow = MutableStateFlow<TvMessage?>(null)
+    private val mqttSubscriber = MqttTvSubscriber(application, mqttFlow)
+ 
     init {
-        // Simulador de datos en vivo:
-        // A los 5 segundos de abrir la pantalla, inyectamos una lectura nueva
-        // simulando que llegó un dato nuevo desde el reloj.
+        mqttSubscriber.connect()
+ 
+        // Observar mensajes MQTT y actualizar el estado de la UI
         viewModelScope.launch {
-            delay(5000)
-            val nuevaLista = _historial.value.toMutableList()
-            nuevaLista.add(LecturaFC(id = 99, valorBpm = 130, hora = "En vivo"))
-            _historial.value = nuevaLista
+            mqttFlow.collect { tvMsg ->
+                if (tvMsg != null) {
+                    _fc.value = tvMsg.bpm
+                    
+                    // Agregar al historial simulado solo si el BPM es diferente al último
+                    val nuevaLista = _historial.value.toMutableList()
+                    val ultimoBpm = nuevaLista.lastOrNull()?.valorBpm
+                    if (ultimoBpm != tvMsg.bpm) {
+                        // Mantener un historial corto
+                        if (nuevaLista.size > 10) nuevaLista.removeAt(0)
+                        nuevaLista.add(LecturaFC(id = System.currentTimeMillis().toInt(), valorBpm = tvMsg.bpm, hora = tvMsg.hora))
+                        _historial.value = nuevaLista
+                    }
+                }
+            }
         }
+    }
+
+    override fun onCleared() {
+        mqttSubscriber.disconnect()
+        super.onCleared()
     }
 }

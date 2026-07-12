@@ -48,9 +48,28 @@ class MainFragment : BrowseSupportFragment() {
         // Observar historial
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.historial.collect { lecturas ->
-                    histAdapter.clear()
-                    lecturas.forEach { histAdapter.add(it) }
+                launch {
+                    viewModel.historial.collect { lecturas ->
+                        histAdapter.clear()
+                        lecturas.forEach { histAdapter.add(it) }
+                    }
+                }
+                
+                // Observar FC actual
+                launch {
+                    viewModel.fc.collect { bpm ->
+                        if (::estadoAdapter.isInitialized && estadoAdapter.size() > 0) {
+                            // Actualizamos el primer elemento (el de latidos)
+                            val lecturaAnterior = estadoAdapter.get(0) as LecturaFC
+                            val lecturaNueva = lecturaAnterior.copy(valorBpm = bpm)
+                            val pasos = estadoAdapter.get(1) as LecturaFC
+                            
+                            // Limpiamos y re-agregamos para forzar el re-dibujado en Leanback
+                            estadoAdapter.clear()
+                            estadoAdapter.add(lecturaNueva)
+                            estadoAdapter.add(pasos)
+                        }
+                    }
                 }
             }
         }
