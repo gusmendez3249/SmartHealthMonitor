@@ -59,15 +59,23 @@ class MainFragment : BrowseSupportFragment() {
                 launch {
                     viewModel.fc.collect { bpm ->
                         if (::estadoAdapter.isInitialized && estadoAdapter.size() > 0) {
-                            // Actualizamos el primer elemento (el de latidos)
+                            // Actualizamos el primer elemento (el de latidos) si existe
                             val lecturaAnterior = estadoAdapter.get(0) as LecturaFC
-                            val lecturaNueva = lecturaAnterior.copy(valorBpm = bpm)
-                            val pasos = estadoAdapter.get(1) as LecturaFC
+                            val lecturaNueva = lecturaAnterior.copy(valorBpm = bpm, hora = "Real-time: ${bpm} bpm")
                             
-                            // Limpiamos y re-agregamos para forzar el re-dibujado en Leanback
+                            estadoAdapter.replace(0, lecturaNueva)
+                        }
+                    }
+                }
+                
+                // Observar Estadisticas
+                launch {
+                    viewModel.estadisticas.collect { stats ->
+                        if (::estadoAdapter.isInitialized) {
                             estadoAdapter.clear()
-                            estadoAdapter.add(lecturaNueva)
-                            estadoAdapter.add(pasos)
+                            // Agregar un mock para real-time FC que se actualice por MQTT
+                            estadoAdapter.add(LecturaFC(id=0, valorBpm=viewModel.fc.value, hora="Real-time"))
+                            stats.forEach { estadoAdapter.add(it) }
                         }
                     }
                 }
@@ -78,11 +86,10 @@ class MainFragment : BrowseSupportFragment() {
     private fun cargarFilas() {
         val rowsAdapter = ArrayObjectAdapter(ListRowPresenter())
  
-        // ── Fila 1: Estado actual (FC + Pasos) ───────────
+        // ── Fila 1: Estado actual (3 dispositivos) ───────────
         estadoAdapter = ArrayObjectAdapter(FCCardPresenter())
-        estadoAdapter.add(LecturaFC(id=0, valorBpm=88, hora="Ahora"))
-        estadoAdapter.add(LecturaFC(id=1, valorBpm=4250, hora="Pasos"))
-        rowsAdapter.add(ListRow(HeaderItem("Estado actual"), estadoAdapter))
+        estadoAdapter.add(LecturaFC(id=0, valorBpm=88, hora="Real-time"))
+        rowsAdapter.add(ListRow(HeaderItem("Estado Actual (3 dispositivos)"), estadoAdapter))
  
         // ── Fila 2: Historial de FC ────────────────────
         histAdapter = ArrayObjectAdapter(FCCardPresenter())

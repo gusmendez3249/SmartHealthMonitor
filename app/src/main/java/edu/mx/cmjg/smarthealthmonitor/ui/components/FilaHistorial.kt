@@ -11,6 +11,10 @@ import androidx.compose.ui.unit.dp
 import edu.mx.cmjg.smarthealthmonitor.data.models.LecturaFC
 import edu.mx.cmjg.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CloudDone
+import androidx.compose.material.icons.filled.CloudOff
+
 // ui/components/FilaHistorial.kt
 @Composable
 fun FilaHistorial(
@@ -26,19 +30,30 @@ fun FilaHistorial(
     ) {
         // Valor FC con color según si es normal o no
         Text(
-            text = "${lectura.valorBpm} bpm",
+            text = "${lectura.bpm} bpm",
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Medium,
-            color = if (lectura.esNormal)
-                MaterialTheme.colorScheme.onSurface
-            else
-                MaterialTheme.colorScheme.error
+            color = if (lectura.estado == "Normal") 
+                MaterialTheme.colorScheme.onSurface 
+            else MaterialTheme.colorScheme.error
         )
-        Text(
-            text = lectura.hora,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = lectura.hora,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            androidx.compose.material3.Icon(
+                imageVector = if (lectura.sincronizado) 
+                    androidx.compose.material.icons.Icons.Default.CloudDone 
+                else 
+                    androidx.compose.material.icons.Icons.Default.CloudOff,
+                contentDescription = if (lectura.sincronizado) "Sincronizado" else "Pendiente de sync",
+                tint = if (lectura.sincronizado) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error,
+                modifier = Modifier.size(16.dp)
+            )
+        }
     }
     HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
 }

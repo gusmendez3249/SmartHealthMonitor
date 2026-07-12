@@ -19,6 +19,9 @@ class TvViewModel(application: Application) : AndroidViewModel(application) {
  
     private val _historial = MutableStateFlow(MockData.historialFC)
     val historial: StateFlow<List<LecturaFC>> = _historial.asStateFlow()
+    
+    private val _estadisticas = MutableStateFlow<List<LecturaFC>>(emptyList())
+    val estadisticas: StateFlow<List<LecturaFC>> = _estadisticas.asStateFlow()
 
     // Flow de mensajes MQTT entrantes
     private val mqttFlow = MutableStateFlow<TvMessage?>(null)
@@ -59,6 +62,15 @@ class TvViewModel(application: Application) : AndroidViewModel(application) {
                         id = dto.id,
                         valorBpm = dto.bpm,
                         hora = dto.hora
+                    )
+                }
+                
+                val stats = neonRepo.obtenerEstadisticas()
+                _estadisticas.value = stats.map { dto ->
+                    LecturaFC(
+                        id = dto.id,
+                        valorBpm = dto.bpm,
+                        hora = "${dto.dispositivo}: ${dto.bpm} avg"
                     )
                 }
             } catch (e: Exception) {
