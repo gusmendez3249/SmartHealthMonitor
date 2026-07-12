@@ -13,7 +13,7 @@ object MqttConfig {
     const val TOPIC_ALERT = "utng/smarthealthmonitor/alerta"
 
     // QoS: 0=best effort, 1=at least once, 2=exactly once
-    const val QOS = 1
+    const val QOS = 0
 
     // Client IDs únicos por dispositivo
     const val CLIENT_WEAR = "smarthealthmonitor-wear"

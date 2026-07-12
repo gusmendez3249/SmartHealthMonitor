@@ -23,6 +23,7 @@ class WearDashboardViewModel(application: Application) : AndroidViewModel(applic
             SmartHealthRepository.fcFlow.collect { rawBpm ->
                 val bpm = if (rawBpm == 0) 72 else rawBpm // default if 0
                 val estado = when { bpm < 60 -> "FC Baja"; bpm > 100 -> "FC Alta"; else -> "Normal" }
+                android.util.Log.d("MQTT_WEAR", "Detectado latido en ViewModel: $bpm. Intentando publicar...")
                 mqttPublisher.publishFC(bpm, estado)
             }
         }

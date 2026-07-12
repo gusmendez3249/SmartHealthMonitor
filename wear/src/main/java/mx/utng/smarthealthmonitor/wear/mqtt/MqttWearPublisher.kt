@@ -10,6 +10,7 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence
 class MqttWearPublisher(private val context: Context) {
 
     private var client: MqttAsyncClient? = null
+    private var connectOptions: MqttConnectOptions? = null
 
     fun connect() {
         client = MqttAsyncClient(
@@ -18,29 +19,55 @@ class MqttWearPublisher(private val context: Context) {
             MemoryPersistence()
         )
 
-        val options = MqttConnectOptions().apply {
+        connectOptions = MqttConnectOptions().apply {
             userName        = MqttConfig.USERNAME
             password        = MqttConfig.PASSWORD.toCharArray()
             isCleanSession  = true
-            connectionTimeout = 30
-            keepAliveInterval = 60
-            // SSL habilitado automáticamente por la URL ssl://
+            isAutomaticReconnect = true
+            connectionTimeout = 10
+            keepAliveInterval = 15
             socketFactory = javax.net.ssl.SSLSocketFactory.getDefault()
         }
 
-        client?.connect(options, null, object : IMqttActionListener {
-            override fun onSuccess(asyncActionToken: IMqttToken?) {
-                android.util.Log.d("MQTT_WEAR", "✅ Conectado a HiveMQ Cloud")
-            }
-            override fun onFailure(token: IMqttToken?, ex: Throwable?) {
-                android.util.Log.e("MQTT_WEAR", "❌ Error: ${ex?.message}")
-            }
-        })
+        doConnect()
+        startConnectionMonitor()
+    }
+
+    private fun doConnect() {
+        try {
+            client?.connect(connectOptions, null, object : IMqttActionListener {
+                override fun onSuccess(asyncActionToken: IMqttToken?) {
+                    android.util.Log.d("MQTT_WEAR", "✅ Conectado a HiveMQ Cloud")
+                }
+                override fun onFailure(token: IMqttToken?, ex: Throwable?) {
+                    android.util.Log.e("MQTT_WEAR", "❌ Error conectando: ${ex?.message}")
+                }
+            })
+        } catch (e: Exception) {
+            android.util.Log.e("MQTT_WEAR", "❌ Error en doConnect: ${e.message}")
+        }
     }
 
     /** Publicar FC al topic MQTT */
     fun publishFC(bpm: Int, estado: String) {
-        if (client?.isConnected != true) return
+        // Si está desconectado, intentar reconectar de inmediato
+        if (client?.isConnected != true) {
+            android.util.Log.w("MQTT_WEAR", "⚠️ Desconectado. Intentando reconectar para publicar $bpm bpm...")
+            try {
+                client?.reconnect()
+            } catch (_: Exception) {}
+            // Esperar brevemente a que reconecte (máx 2 segundos)
+            var intentos = 0
+            while (client?.isConnected != true && intentos < 20) {
+                Thread.sleep(100)
+                intentos++
+            }
+            if (client?.isConnected != true) {
+                android.util.Log.e("MQTT_WEAR", "❌ No se pudo reconectar para publicar $bpm bpm")
+                return
+            }
+            android.util.Log.d("MQTT_WEAR", "🔄 Reconectado exitosamente!")
+        }
 
         val message = FcMessage(bpm = bpm, estado = estado)
         val payload = Json.encodeToString(message).toByteArray()
@@ -50,8 +77,26 @@ class MqttWearPublisher(private val context: Context) {
             isRetained = true  // el TV verá el último valor al conectarse
         }
 
-        client?.publish(MqttConfig.TOPIC_FC, mqttMessage)
-        android.util.Log.d("MQTT_WEAR", "📤 Publicado: ${bpm} bpm → ${MqttConfig.TOPIC_FC}")
+        try {
+            client?.publish(MqttConfig.TOPIC_FC, mqttMessage)
+            android.util.Log.d("MQTT_WEAR", "📤 Publicado: $bpm bpm → ${MqttConfig.TOPIC_FC}")
+        } catch (e: Exception) {
+            android.util.Log.e("MQTT_WEAR", "❌ Error publicando: ${e.message}")
+        }
+    }
+
+    private fun startConnectionMonitor() {
+        CoroutineScope(Dispatchers.IO).launch {
+            while (true) {
+                delay(5000) // Revisa cada 5 segundos
+                if (client != null && client?.isConnected == false) {
+                    android.util.Log.w("MQTT_WEAR", "⚠️ Monitor detectó desconexión. Forzando reconexión...")
+                    try {
+                        client?.reconnect()
+                    } catch (_: Exception) {}
+                }
+            }
+        }
     }
 
     fun disconnect() { client?.disconnect() }
