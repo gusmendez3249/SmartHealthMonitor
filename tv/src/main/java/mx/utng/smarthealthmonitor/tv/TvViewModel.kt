@@ -23,9 +23,12 @@ class TvViewModel(application: Application) : AndroidViewModel(application) {
     // Flow de mensajes MQTT entrantes
     private val mqttFlow = MutableStateFlow<TvMessage?>(null)
     private val mqttSubscriber = MqttTvSubscriber(application, mqttFlow)
+    
+    private val neonRepo = mx.utng.smarthealthmonitor.tv.data.TvNeonRepository()
  
     init {
         mqttSubscriber.connect()
+        cargarDatos()
  
         // Observar mensajes MQTT y actualizar el estado de la UI
         viewModelScope.launch {
@@ -38,11 +41,28 @@ class TvViewModel(application: Application) : AndroidViewModel(application) {
                     val ultimoBpm = nuevaLista.lastOrNull()?.valorBpm
                     if (ultimoBpm != tvMsg.bpm) {
                         // Mantener un historial corto
-                        if (nuevaLista.size > 10) nuevaLista.removeAt(0)
-                        nuevaLista.add(LecturaFC(id = System.currentTimeMillis().toInt(), valorBpm = tvMsg.bpm, hora = tvMsg.hora))
+                        if (nuevaLista.size > 50) nuevaLista.removeAt(0)
+                        nuevaLista.add(0, LecturaFC(id = System.currentTimeMillis().toInt(), valorBpm = tvMsg.bpm, hora = tvMsg.hora))
                         _historial.value = nuevaLista
                     }
                 }
+            }
+        }
+    }
+    
+    fun cargarDatos() {
+        viewModelScope.launch {
+            try {
+                val lecturas = neonRepo.obtenerHistorialCompleto(50)
+                _historial.value = lecturas.map { dto ->
+                    LecturaFC(
+                        id = dto.id,
+                        valorBpm = dto.bpm,
+                        hora = dto.hora
+                    )
+                }
+            } catch (e: Exception) {
+                android.util.Log.e("TvViewModel", "Error fetching from Neon", e)
             }
         }
     }

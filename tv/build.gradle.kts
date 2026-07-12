@@ -24,6 +24,9 @@ android {
         buildConfigField("int", "MQTT_PORT", "${localProperties.getProperty("MQTT_PORT")}")
         buildConfigField("String", "MQTT_USERNAME", "\"${localProperties.getProperty("MQTT_USERNAME")}\"")
         buildConfigField("String", "MQTT_PASSWORD", "\"${localProperties.getProperty("MQTT_PASSWORD")}\"")
+        buildConfigField("String", "NEON_API_KEY", "\"${localProperties.getProperty("NEON_API_KEY")}\"")
+        buildConfigField("String", "NEON_HOST", "\"${localProperties.getProperty("NEON_HOST")}\"")
+        buildConfigField("String", "NEON_CONN_STRING", "\"${localProperties.getProperty("NEON_CONN_STRING")}\"")
     }
     buildFeatures {
         buildConfig = true
@@ -58,6 +61,13 @@ dependencies {
     // Eclipse Paho MQTT para Android
     implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
     implementation("org.eclipse.paho:org.eclipse.paho.android.service:1.1.1")
+    
+    // Retrofit + OkHttp + Gson
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    
     // Kotlinx Serialization para JSON
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 }
