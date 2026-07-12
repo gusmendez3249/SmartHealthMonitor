@@ -8,7 +8,30 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import mx.utng.smarthealthmonitor.wear.data.SmartHealthRepository
 
-class WearDashboardViewModel : ViewModel() {
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import kotlinx.coroutines.launch
+import mx.utng.smarthealthmonitor.wear.mqtt.MqttWearPublisher
+
+class WearDashboardViewModel(application: Application) : AndroidViewModel(application) {
+    
+    private val mqttPublisher = MqttWearPublisher(application)
+    
+    init {
+        mqttPublisher.connect()
+        viewModelScope.launch {
+            SmartHealthRepository.fcFlow.collect { rawBpm ->
+                val bpm = if (rawBpm == 0) 72 else rawBpm // default if 0
+                val estado = when { bpm < 60 -> "FC Baja"; bpm > 100 -> "FC Alta"; else -> "Normal" }
+                mqttPublisher.publishFC(bpm, estado)
+            }
+        }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        mqttPublisher.disconnect()
+    }
  
     // Usamos el Repository local del módulo wear
     val fc: StateFlow<Int> = SmartHealthRepository.fcFlow
