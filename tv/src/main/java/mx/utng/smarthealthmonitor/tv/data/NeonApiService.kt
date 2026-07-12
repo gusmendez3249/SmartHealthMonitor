@@ -11,19 +11,26 @@ data class NeonResponse<T>(
 )
 
 data class LecturaFcDto(
-    val id          : Int    = 0,
-    val bpm         : Int,
-    val estado      : String,
-    val dispositivo : String,
-    val hora        : String,
-    val fecha       : String  = "",
-    val created_at  : String  = "",
+    val id             : Int    = 0,
+    val bpm            : Int    = 0,
+    val estado         : String = "",
+    val dispositivo    : String = "",
+    val hora           : String = "",
+    val fecha          : String = "",
+    val created_at     : String = "",
+    
+    // Extra fields for advanced queries
+    val hora_dia       : Double? = null,
+    val promedio_bpm   : Double? = null,
+    val total_lecturas : Int? = null,
+    val lecturas_altas : Int? = null,
+    val desde          : String? = null,
+    val hasta          : String? = null
 )
 
 interface NeonApiService {
     @POST("sql")
     suspend fun executeQuery(
-        @Header("Authorization") auth: String,
         @Header("Neon-Connection-String") connStr: String,
         @Body request: NeonRequest
     ): NeonResponse<LecturaFcDto>

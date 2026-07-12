@@ -17,6 +17,7 @@ class MainFragment : BrowseSupportFragment() {
     private val viewModel: TvViewModel by viewModels()
     private lateinit var histAdapter: ArrayObjectAdapter
     private lateinit var estadoAdapter: ArrayObjectAdapter
+    private lateinit var avanzadasAdapter: ArrayObjectAdapter
  
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -35,7 +36,7 @@ class MainFragment : BrowseSupportFragment() {
         // Listener para navegar al detalle de la lectura
         setOnItemViewClickedListener { itemViewHolder, item, rowViewHolder, row ->
             if (item is LecturaFC) {
-                val detail = DetailFragment.newInstance(item.id)
+                val detail = DetailFragment.newInstance(item.id, item.valorBpm, item.hora)
                 parentFragmentManager.beginTransaction()
                     .replace(R.id.main_browse_fragment, detail)
                     .addToBackStack(null)  // Back regresa al BrowseFragment
@@ -79,6 +80,16 @@ class MainFragment : BrowseSupportFragment() {
                         }
                     }
                 }
+                
+                // Observar Consultas Avanzadas
+                launch {
+                    viewModel.avanzadas.collect { lecturas ->
+                        if (::avanzadasAdapter.isInitialized) {
+                            avanzadasAdapter.clear()
+                            lecturas.forEach { avanzadasAdapter.add(it) }
+                        }
+                    }
+                }
             }
         }
     }
@@ -95,10 +106,9 @@ class MainFragment : BrowseSupportFragment() {
         histAdapter = ArrayObjectAdapter(FCCardPresenter())
         rowsAdapter.add(ListRow(HeaderItem("Historial FC"), histAdapter))
         
-        // ── Fila 3: Alertas recientes (Reto adicional) ──
-        val alertasAdapter = ArrayObjectAdapter(FCCardPresenter())
-        MockData.alertasRecientes.forEach { alertasAdapter.add(it) }
-        rowsAdapter.add(ListRow(HeaderItem("Alertas recientes"), alertasAdapter))
+        // ── Fila 3: Consultas Avanzadas (Reto extra) ──
+        avanzadasAdapter = ArrayObjectAdapter(FCCardPresenter())
+        rowsAdapter.add(ListRow(HeaderItem("Consultas Avanzadas"), avanzadasAdapter))
  
         this.adapter = rowsAdapter
     }
